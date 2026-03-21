@@ -14,8 +14,12 @@ if git diff --quiet public/news.json 2>/dev/null; then
   exit 0
 fi
 
-# Commit and push
-git add public/news.json public/news-archive.json
+# Send news email (generates newsletter HTML files too)
+echo "$(date): Sending news email..."
+/opt/homebrew/bin/node scripts/send-news-email.js
+
+# Commit and push (includes newsletter HTML for language switch links)
+git add public/news.json public/news-archive.json public/newsletter/
 git commit -m "Update daily news $(date +%Y-%m-%d)"
 git push origin main
 
