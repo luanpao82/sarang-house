@@ -15,10 +15,13 @@ const IMMIGRATION_QUERIES = [
   'Asian American immigrant deportation visa healthcare',
 ];
 
-// Florida news relevant to immigrants
+// Florida news relevant to residents & immigrants
 const FLORIDA_QUERIES = [
   'Florida immigration law policy',
-  'Florida immigrant community welfare',
+  'Florida public benefit Medicaid SNAP welfare',
+  'Florida tax property insurance law',
+  'Florida education school policy',
+  'Florida traffic driving license law',
 ];
 
 function getToday() {
@@ -37,6 +40,12 @@ function classifyTag(title, snippet) {
     return { tag: 'Welfare', tagKr: '복지' };
   if (text.includes('law') || text.includes('bill') || text.includes('policy') || text.includes('regulation'))
     return { tag: 'Policy', tagKr: '정책' };
+  if (text.includes('tax') || text.includes('property') || text.includes('insurance'))
+    return { tag: 'Tax & Finance', tagKr: '세금/재정' };
+  if (text.includes('school') || text.includes('education') || text.includes('student'))
+    return { tag: 'Education', tagKr: '교육' };
+  if (text.includes('traffic') || text.includes('driver') || text.includes('license') || text.includes('driving'))
+    return { tag: 'Transportation', tagKr: '교통' };
   if (text.includes('community') || text.includes('church') || text.includes('organization'))
     return { tag: 'Community', tagKr: '커뮤니티' };
   return { tag: 'News', tagKr: '뉴스' };
