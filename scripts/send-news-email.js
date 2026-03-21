@@ -16,7 +16,7 @@ const SUBSCRIBERS_FILE = path.join(__dirname, 'subscribers.json');
 const GMAIL_USER = 'saranghouse.orlando@gmail.com';
 const GMAIL_APP_PASSWORD = process.env.GMAIL_APP_PASSWORD || 'xblm ijdh gzvn nizx';
 
-const SITE_URL = 'https://saranghouse.org';
+const SITE_URL = 'https://sarang-house.vercel.app';
 
 function getDateStr() {
   const d = new Date();
