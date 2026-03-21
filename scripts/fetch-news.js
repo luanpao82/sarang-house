@@ -99,6 +99,40 @@ function isDuplicate(existing, title) {
   });
 }
 
+// Extract key terms from title (remove stop words, get meaningful words)
+function extractKeyTerms(title) {
+  const stopWords = new Set([
+    'the', 'a', 'an', 'is', 'are', 'was', 'were', 'be', 'been', 'being',
+    'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
+    'should', 'may', 'might', 'can', 'shall', 'to', 'of', 'in', 'for',
+    'on', 'with', 'at', 'by', 'from', 'as', 'into', 'about', 'after',
+    'before', 'between', 'under', 'over', 'and', 'but', 'or', 'not',
+    'no', 'nor', 'so', 'yet', 'both', 'each', 'its', 'it', 'this',
+    'that', 'these', 'those', 'here', 'there', 'how', 'why', 'what',
+    'when', 'where', 'who', 'whom', 'which', 'new', 'says', 'say',
+    'said', 'amid', 'also', 'more', 'than', 'some', 'all', 'any',
+    'up', 'out', 'now', 'just', 'get', 'got', 'back', 'over',
+  ]);
+  return title.toLowerCase()
+    .replace(/[^a-z0-9\s]/g, '')
+    .split(/\s+/)
+    .filter(w => w.length > 2 && !stopWords.has(w));
+}
+
+// Check if a new title covers the same topic as any existing article
+function isSameTopic(existing, title) {
+  const newTerms = extractKeyTerms(title);
+  if (newTerms.length === 0) return false;
+
+  return existing.some(item => {
+    const existingTerms = extractKeyTerms(item.titleEn);
+    if (existingTerms.length === 0) return false;
+    const overlap = newTerms.filter(t => existingTerms.includes(t));
+    const overlapRatio = overlap.length / Math.min(newTerms.length, existingTerms.length);
+    return overlapRatio >= 0.5;
+  });
+}
+
 function fetchUrl(url) {
   return new Promise((resolve, reject) => {
     const req = https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0' } }, (res) => {
@@ -191,6 +225,10 @@ async function fetchArticles(queries, maxCount, label, allCollected, maxPerQuery
         if (articles.length >= maxCount || addedThisQuery >= perQueryLimit) break;
         if (!item.title || !item.link) continue;
         if (isDuplicate(allCollected, item.title) || isDuplicate(articles, item.title)) continue;
+        if (isSameTopic(allCollected, item.title) || isSameTopic(articles, item.title)) {
+          console.log(`    [SKIP] 유사 주제: ${item.title.substring(0, 50)}...`);
+          continue;
+        }
 
         const titleLower = item.title.toLowerCase();
         if (titleLower.includes('south korea') && !titleLower.includes('american') && !titleLower.includes('immigrant') && !titleLower.includes('u.s.')) continue;
