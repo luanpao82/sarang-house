@@ -3,7 +3,12 @@
 import { useState, useEffect } from "react";
 
 export function useLang() {
-  const [isKorean, setIsKorean] = useState(false);
+  const [isKorean, setIsKorean] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("lang") === "ko";
+    }
+    return false;
+  });
 
   useEffect(() => {
     const handler = (e: Event) => {

@@ -12,7 +12,12 @@ const navLinks = [
 ];
 
 export default function Navigation() {
-  const [isKorean, setIsKorean] = useState(false);
+  const [isKorean, setIsKorean] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("lang") === "ko";
+    }
+    return false;
+  });
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -23,6 +28,7 @@ export default function Navigation() {
   }, []);
 
   useEffect(() => {
+    localStorage.setItem("lang", isKorean ? "ko" : "en");
     document.documentElement.lang = isKorean ? "ko" : "en";
     document.dispatchEvent(
       new CustomEvent("langchange", { detail: isKorean })
