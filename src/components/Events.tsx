@@ -2,6 +2,7 @@
 
 import { useLang } from "@/hooks/useLang";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 interface NewsItem {
   date: string;
@@ -128,6 +129,15 @@ function NewsCards({ isKorean }: { isKorean: boolean }) {
             </div>
           </a>
         ))}
+      </div>
+      <div className="text-center mt-8">
+        <Link
+          href="/news-archive"
+          className="inline-flex items-center gap-2 text-sm font-medium text-terracotta hover:text-terracotta-dark transition-colors border border-terracotta/30 hover:border-terracotta/60 rounded-full px-6 py-2.5"
+        >
+          {isKorean ? "지난 기사 보기" : "View Past Articles"}
+          <span aria-hidden="true">&rarr;</span>
+        </Link>
       </div>
     </div>
   );

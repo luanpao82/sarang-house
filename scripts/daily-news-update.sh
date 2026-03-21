@@ -15,7 +15,7 @@ if git diff --quiet public/news.json 2>/dev/null; then
 fi
 
 # Commit and push
-git add public/news.json
+git add public/news.json public/news-archive.json
 git commit -m "Update daily news $(date +%Y-%m-%d)"
 git push origin main
 
