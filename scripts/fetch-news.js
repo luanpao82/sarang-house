@@ -4,12 +4,21 @@ const fs = require('fs');
 const path = require('path');
 
 const NEWS_FILE = path.join(__dirname, '..', 'public', 'news.json');
+const ARCHIVE_FILE = path.join(__dirname, '..', 'public', 'news-archive.json');
 const MAX_NEWS = 5;
+const IMMIGRATION_COUNT = 2;
+const FLORIDA_COUNT = 3;
 
-const SEARCH_QUERIES = [
+// Immigration news queries
+const IMMIGRATION_QUERIES = [
   'Korean American immigration policy',
-  'Asian American immigrant welfare healthcare',
-  'Korean community deportation visa',
+  'Asian American immigrant deportation visa healthcare',
+];
+
+// Florida news relevant to immigrants
+const FLORIDA_QUERIES = [
+  'Florida immigration law policy',
+  'Florida immigrant community welfare',
 ];
 
 function getToday() {
@@ -108,7 +117,9 @@ function parseRssItems(xml) {
       return m ? (m[1] || m[2] || '').trim() : '';
     };
     const title = get('title').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#39;/g, "'").replace(/&quot;/g, '"');
-    const link = get('link');
+    // Google News RSS: <link/> followed by URL text
+    const linkM = block.match(/<link\s*\/?>\s*(https?:\/\/[^\s<]+)/);
+    const link = linkM ? linkM[1].trim() : get('link');
     const rawDesc = get('description');
     const description = rawDesc
       // First decode HTML entities so tags become real tags
@@ -128,11 +139,9 @@ function parseRssItems(xml) {
 }
 
 function translateWithClaude(articles) {
-  const prompt = `You are a Korean translator for a Korean American community website. Translate the following news articles' titles and summaries into Korean. The audience is Korean-speaking immigrants in the US.
-
-For each article, provide:
+  const prompt = `You are a Korean translator for Sarang House, a Korean American community organization in Florida. Translate the following news articles for Korean-speaking immigrants. For each article, provide:
 1. A Korean title (natural, not literal translation)
-2. A Korean summary (2-3 sentences, informative for Korean immigrant readers)
+2. A Korean summary (2-3 sentences, explaining the news and its impact on immigrant communities)
 
 Articles:
 ${articles.map((a, i) => `[${i + 1}] Title: ${a.titleEn}\nSummary: ${a.summaryEn}`).join('\n\n')}
@@ -156,93 +165,101 @@ Respond in this exact JSON format (no markdown, no code blocks):
   return null;
 }
 
-(async () => {
-  const today = getToday();
-  console.log(`\n=== Daily News Fetch: ${today} ===\n`);
-
-  let existing = [];
-  try {
-    existing = JSON.parse(fs.readFileSync(NEWS_FILE, 'utf-8'));
-  } catch {}
-
-  const newArticles = [];
-
-  for (const query of SEARCH_QUERIES) {
-    if (newArticles.length >= MAX_NEWS) break;
-
-    console.log(`Searching: "${query}"...`);
-
+async function fetchArticles(queries, maxCount, label, allCollected) {
+  const articles = [];
+  for (const query of queries) {
+    if (articles.length >= maxCount) break;
+    console.log(`  Searching: "${query}"...`);
     try {
       const rssUrl = `https://news.google.com/rss/search?q=${encodeURIComponent(query + ' when:7d')}&hl=en-US&gl=US&ceid=US:en`;
       const xml = await fetchUrl(rssUrl);
       const items = parseRssItems(xml);
-
-      console.log(`  Found ${items.length} results`);
+      console.log(`    Found ${items.length} results`);
 
       for (const item of items) {
-        if (newArticles.length >= MAX_NEWS) break;
+        if (articles.length >= maxCount) break;
         if (!item.title || !item.link) continue;
-        if (isDuplicate(existing, item.title) || isDuplicate(newArticles, item.title)) continue;
+        if (isDuplicate(allCollected, item.title) || isDuplicate(articles, item.title)) continue;
 
         const titleLower = item.title.toLowerCase();
         if (titleLower.includes('south korea') && !titleLower.includes('american') && !titleLower.includes('immigrant') && !titleLower.includes('u.s.')) continue;
 
         const tags = classifyTag(item.title, item.description);
         const source = item.source || extractSource(item.link);
+        const titleClean = item.title.replace(/ - [^-]+$/, '');
 
-        let snippet = item.description;
-        const sentences = snippet.split(/(?<=[.!?])\s+/);
-        if (sentences.length > 3) {
-          snippet = sentences.slice(0, 3).join(' ');
-        }
-
-        newArticles.push({
-          date: today,
-          titleEn: item.title,
-          titleKr: item.title,
-          summaryEn: snippet || item.title,
-          summaryKr: snippet || item.title,
+        articles.push({
+          date: getToday(),
+          titleEn: titleClean,
+          titleKr: titleClean,
+          summaryEn: item.description || titleClean,
+          summaryKr: item.description || titleClean,
           ...tags,
           url: item.link,
           source: source,
         });
-
-        console.log(`  [NEW] ${item.title.substring(0, 60)}...`);
+        console.log(`    [${label}] ${titleClean.substring(0, 55)}...`);
       }
     } catch (e) {
-      console.error(`  Error: ${e.message}`);
+      console.error(`    Error: ${e.message}`);
     }
   }
+  return articles;
+}
 
-  if (newArticles.length === 0) {
+(async () => {
+  const today = getToday();
+  console.log(`\n=== Daily News Fetch: ${today} ===`);
+  console.log(`  Target: ${IMMIGRATION_COUNT} immigration + ${FLORIDA_COUNT} Florida\n`);
+
+  // Fetch immigration news (2 articles)
+  console.log('[Immigration News]');
+  const immArticles = await fetchArticles(IMMIGRATION_QUERIES, IMMIGRATION_COUNT, 'IMM', []);
+
+  // Fetch Florida news (3 articles)
+  console.log('\n[Florida News]');
+  const flArticles = await fetchArticles(FLORIDA_QUERIES, FLORIDA_COUNT, 'FL', immArticles);
+
+  const allArticles = [...immArticles, ...flArticles];
+
+  if (allArticles.length === 0) {
     console.log('\nNo new articles found.');
     return;
   }
 
   // Translate to Korean using claude CLI
-  console.log(`\nTranslating ${newArticles.length} articles to Korean...`);
-  const translations = translateWithClaude(newArticles);
-  if (translations && translations.length === newArticles.length) {
-    for (let i = 0; i < newArticles.length; i++) {
-      newArticles[i].titleKr = translations[i].titleKr || newArticles[i].titleKr;
-      newArticles[i].summaryKr = translations[i].summaryKr || newArticles[i].summaryKr;
+  console.log(`\nTranslating ${allArticles.length} articles to Korean...`);
+  const translations = translateWithClaude(allArticles);
+  if (translations && translations.length === allArticles.length) {
+    for (let i = 0; i < allArticles.length; i++) {
+      allArticles[i].titleKr = translations[i].titleKr || allArticles[i].titleKr;
+      allArticles[i].summaryKr = translations[i].summaryKr || allArticles[i].summaryKr;
     }
     console.log('  Translation complete.');
   } else {
     console.log('  Translation failed, using English as fallback.');
   }
 
-  const combined = [...newArticles, ...existing].slice(0, MAX_NEWS);
-  fs.writeFileSync(NEWS_FILE, JSON.stringify(combined, null, 2));
+  fs.writeFileSync(NEWS_FILE, JSON.stringify(allArticles, null, 2));
+
+  // Archive: 과거 기사 누적 저장
+  let archive = [];
+  try { archive = JSON.parse(fs.readFileSync(ARCHIVE_FILE, 'utf8')); } catch {}
+  for (const article of allArticles) {
+    if (!isDuplicate(archive, article.titleEn)) {
+      archive.unshift(article);
+    }
+  }
+  fs.writeFileSync(ARCHIVE_FILE, JSON.stringify(archive, null, 2));
+  console.log(`  Archive: ${archive.length} total articles`);
 
   console.log(`\n==========================================`);
-  console.log(`  ${newArticles.length} new articles added`);
-  console.log(`  Total displayed: ${combined.length}`);
+  console.log(`  Immigration: ${immArticles.length} / Florida: ${flArticles.length}`);
+  console.log(`  Total: ${allArticles.length} articles`);
   console.log(`  File: ${NEWS_FILE}`);
   console.log(`==========================================`);
-  for (const a of combined) {
+  for (const a of allArticles) {
     console.log(`  [${a.tag}] ${a.titleEn.substring(0, 60)}`);
-    console.log(`    → ${a.url.substring(0, 70)}`);
   }
   console.log('\nDone!');
 })();
