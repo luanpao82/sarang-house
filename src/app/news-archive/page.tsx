@@ -18,6 +18,71 @@ interface NewsItem {
   source: string;
 }
 
+function ArchiveCard({
+  item,
+  isKorean,
+}: {
+  item: NewsItem;
+  isKorean: boolean;
+}) {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <div
+      className="group block bg-white rounded-xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all duration-200 border border-warm-border/50 cursor-pointer"
+      onClick={() => setExpanded(!expanded)}
+    >
+      <div className="flex items-start gap-4">
+        <div className="shrink-0 text-center min-w-[48px]">
+          <span className="text-xs text-warm-gray-light">
+            {formatDay(item.date, isKorean)}
+          </span>
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2 mb-1.5">
+            <span className="inline-block text-[10px] font-semibold uppercase tracking-wider text-terracotta bg-terracotta/10 px-2 py-0.5 rounded-full">
+              {isKorean ? item.tagKr : item.tag}
+            </span>
+            <span className="text-[10px] text-warm-gray-light">
+              {item.source}
+            </span>
+          </div>
+          <h3 className="font-bold text-green text-sm sm:text-base leading-snug group-hover:text-terracotta transition-colors">
+            {isKorean ? item.titleKr : item.titleEn}
+          </h3>
+          <p
+            className={`mt-1.5 text-xs sm:text-sm text-warm-gray leading-relaxed ${
+              expanded ? "" : "line-clamp-2"
+            }`}
+          >
+            {isKorean ? item.summaryKr : item.summaryEn}
+          </p>
+          {expanded && (
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="inline-block mt-3 text-xs text-white bg-terracotta hover:bg-terracotta-dark font-medium px-3 py-1.5 rounded-full transition-colors"
+            >
+              {isKorean ? "원문보기 →" : "View Original →"}
+            </a>
+          )}
+        </div>
+        <span className="shrink-0 text-xs text-terracotta mt-1">
+          {expanded
+            ? isKorean
+              ? "접기 ↑"
+              : "Less ↑"
+            : isKorean
+              ? "더보기 ↓"
+              : "More ↓"}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 function formatMonthLabel(yearMonth: string, isKorean: boolean) {
   const [year, month] = yearMonth.split("-");
   if (isKorean) {
@@ -110,40 +175,11 @@ export default function NewsArchive() {
                   </h2>
                   <div className="space-y-3">
                     {grouped[ym].map((item, i) => (
-                      <a
+                      <ArchiveCard
                         key={i}
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group block bg-white rounded-xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all duration-200 border border-warm-border/50"
-                      >
-                        <div className="flex items-start gap-4">
-                          <div className="shrink-0 text-center min-w-[48px]">
-                            <span className="text-xs text-warm-gray-light">
-                              {formatDay(item.date, isKorean)}
-                            </span>
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <div className="flex items-center gap-2 mb-1.5">
-                              <span className="inline-block text-[10px] font-semibold uppercase tracking-wider text-terracotta bg-terracotta/10 px-2 py-0.5 rounded-full">
-                                {isKorean ? item.tagKr : item.tag}
-                              </span>
-                              <span className="text-[10px] text-warm-gray-light">
-                                {item.source}
-                              </span>
-                            </div>
-                            <h3 className="font-bold text-green text-sm sm:text-base leading-snug group-hover:text-terracotta transition-colors">
-                              {isKorean ? item.titleKr : item.titleEn}
-                            </h3>
-                            <p className="mt-1.5 text-xs sm:text-sm text-warm-gray leading-relaxed line-clamp-2">
-                              {isKorean ? item.summaryKr : item.summaryEn}
-                            </p>
-                          </div>
-                          <span className="shrink-0 text-xs text-terracotta opacity-0 group-hover:opacity-100 transition-opacity mt-1">
-                            {isKorean ? "보기 →" : "Read →"}
-                          </span>
-                        </div>
-                      </a>
+                        item={item}
+                        isKorean={isKorean}
+                      />
                     ))}
                   </div>
                 </section>

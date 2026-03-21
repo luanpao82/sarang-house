@@ -77,6 +77,56 @@ function formatDate(dateStr: string, isKorean: boolean) {
   };
 }
 
+function NewsCard({ item, isKorean }: { item: NewsItem; isKorean: boolean }) {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <div
+      className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-warm-border/50 flex flex-col cursor-pointer"
+      onClick={() => setExpanded(!expanded)}
+    >
+      <div className="p-5 flex-1 flex flex-col">
+        <div className="flex items-center gap-2 mb-3">
+          <span className="inline-block text-[10px] font-semibold uppercase tracking-wider text-terracotta bg-terracotta/10 px-2 py-0.5 rounded-full">
+            {isKorean ? item.tagKr : item.tag}
+          </span>
+          <span className="text-[10px] text-warm-gray">{item.date}</span>
+        </div>
+        <h4 className="font-bold text-green text-sm sm:text-base leading-snug mb-3 group-hover:text-terracotta transition-colors">
+          {isKorean ? item.titleKr : item.titleEn}
+        </h4>
+        <p
+          className={`text-xs sm:text-sm text-warm-gray leading-relaxed flex-1 ${
+            expanded ? "" : "line-clamp-3"
+          }`}
+        >
+          {isKorean ? item.summaryKr : item.summaryEn}
+        </p>
+        <div className="mt-4 flex items-center justify-between">
+          <span className="text-[10px] text-warm-gray/70">
+            {isKorean ? "출처" : "Source"}: {item.source}
+          </span>
+          {expanded ? (
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="text-xs text-white bg-terracotta hover:bg-terracotta-dark font-medium px-3 py-1.5 rounded-full transition-colors"
+            >
+              {isKorean ? "원문보기 →" : "View Original →"}
+            </a>
+          ) : (
+            <span className="text-xs text-terracotta font-medium">
+              {isKorean ? "더보기 ↓" : "More ↓"}
+            </span>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function NewsCards({ isKorean }: { isKorean: boolean }) {
   const [news, setNews] = useState<NewsItem[]>([]);
 
@@ -96,38 +146,7 @@ function NewsCards({ isKorean }: { isKorean: boolean }) {
       </h3>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {news.slice(0, 6).map((item, i) => (
-          <a
-            key={i}
-            href={item.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-warm-border/50 flex flex-col"
-          >
-            <div className="p-5 flex-1 flex flex-col">
-              <div className="flex items-center gap-2 mb-3">
-                <span className="inline-block text-[10px] font-semibold uppercase tracking-wider text-terracotta bg-terracotta/10 px-2 py-0.5 rounded-full">
-                  {isKorean ? item.tagKr : item.tag}
-                </span>
-                <span className="text-[10px] text-warm-gray">
-                  {item.date}
-                </span>
-              </div>
-              <h4 className="font-bold text-green text-sm sm:text-base leading-snug mb-3 group-hover:text-terracotta transition-colors">
-                {isKorean ? item.titleKr : item.titleEn}
-              </h4>
-              <p className="text-xs sm:text-sm text-warm-gray leading-relaxed flex-1">
-                {isKorean ? item.summaryKr : item.summaryEn}
-              </p>
-              <div className="mt-4 flex items-center justify-between">
-                <span className="text-[10px] text-warm-gray/70">
-                  {isKorean ? "출처" : "Source"}: {item.source}
-                </span>
-                <span className="text-xs text-terracotta font-medium group-hover:underline">
-                  {isKorean ? "자세히 보기 →" : "Read more →"}
-                </span>
-              </div>
-            </div>
-          </a>
+          <NewsCard key={i} item={item} isKorean={isKorean} />
         ))}
       </div>
       <div className="text-center mt-8">
