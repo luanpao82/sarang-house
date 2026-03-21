@@ -6,12 +6,13 @@
  */
 
 const nodemailer = require('nodemailer');
+const XLSX = require('xlsx');
 const fs = require('fs');
 const path = require('path');
 
 const NEWS_FILE = path.join(__dirname, '..', 'public', 'news.json');
 const NEWSLETTER_DIR = path.join(__dirname, '..', 'public', 'newsletter');
-const SUBSCRIBERS_FILE = path.join(__dirname, 'subscribers.json');
+const SUBSCRIBERS_XLSX = path.join(__dirname, 'subscribers.xlsx');
 
 const GMAIL_USER = 'saranghouse.orlando@gmail.com';
 const GMAIL_APP_PASSWORD = process.env.GMAIL_APP_PASSWORD || 'xblm ijdh gzvn nizx';
@@ -33,7 +34,11 @@ function getDateLabel(lang) {
 
 function getRecipients() {
   try {
-    return JSON.parse(fs.readFileSync(SUBSCRIBERS_FILE, 'utf8'));
+    const wb = XLSX.readFile(SUBSCRIBERS_XLSX);
+    const ws = wb.Sheets[wb.SheetNames[0]];
+    const rows = XLSX.utils.sheet_to_json(ws);
+    const emails = rows.map(r => r['이메일'] || r['email'] || r['Email']).filter(Boolean);
+    return emails.length > 0 ? emails : ['saranghouse.orlando@gmail.com'];
   } catch {
     return ['saranghouse.orlando@gmail.com'];
   }
@@ -154,7 +159,7 @@ function buildHtml(articles, lang, dateStr) {
           </tr>
           <tr>
             <td align="center" style="padding: 24px 0 0 0;">
-              <a href="${SITE_URL}/news-archive" style="display: inline-block; font-size: 13px; font-weight: 600; color: #ffffff; background: #C4622D; text-decoration: none; padding: 10px 24px; border-radius: 99px;">${t.archiveBtn}</a>
+              <a href="${SITE_URL}/news-archive${isKr ? '?lang=ko' : ''}" style="display: inline-block; font-size: 13px; font-weight: 600; color: #ffffff; background: #C4622D; text-decoration: none; padding: 10px 24px; border-radius: 99px;">${t.archiveBtn}</a>
             </td>
           </tr>
           <tr>

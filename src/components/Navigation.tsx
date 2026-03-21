@@ -14,6 +14,12 @@ const navLinks = [
 export default function Navigation() {
   const [isKorean, setIsKorean] = useState(() => {
     if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const langParam = params.get("lang");
+      if (langParam) {
+        localStorage.setItem("lang", langParam);
+        return langParam === "ko";
+      }
       return localStorage.getItem("lang") === "ko";
     }
     return false;
