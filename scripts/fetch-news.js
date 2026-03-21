@@ -174,10 +174,12 @@ Respond in this exact JSON format (no markdown, no code blocks):
   return null;
 }
 
-async function fetchArticles(queries, maxCount, label, allCollected) {
+async function fetchArticles(queries, maxCount, label, allCollected, maxPerQuery = maxCount) {
   const articles = [];
   for (const query of queries) {
     if (articles.length >= maxCount) break;
+    const perQueryLimit = Math.min(maxPerQuery, maxCount - articles.length);
+    let addedThisQuery = 0;
     console.log(`  Searching: "${query}"...`);
     try {
       const rssUrl = `https://news.google.com/rss/search?q=${encodeURIComponent(query + ' when:7d')}&hl=en-US&gl=US&ceid=US:en`;
@@ -186,7 +188,7 @@ async function fetchArticles(queries, maxCount, label, allCollected) {
       console.log(`    Found ${items.length} results`);
 
       for (const item of items) {
-        if (articles.length >= maxCount) break;
+        if (articles.length >= maxCount || addedThisQuery >= perQueryLimit) break;
         if (!item.title || !item.link) continue;
         if (isDuplicate(allCollected, item.title) || isDuplicate(articles, item.title)) continue;
 
@@ -207,6 +209,7 @@ async function fetchArticles(queries, maxCount, label, allCollected) {
           url: item.link,
           source: source,
         });
+        addedThisQuery++;
         console.log(`    [${label}] ${titleClean.substring(0, 55)}...`);
       }
     } catch (e) {
@@ -225,9 +228,9 @@ async function fetchArticles(queries, maxCount, label, allCollected) {
   console.log('[Immigration News]');
   const immArticles = await fetchArticles(IMMIGRATION_QUERIES, IMMIGRATION_COUNT, 'IMM', []);
 
-  // Fetch Florida news (3 articles)
+  // Fetch Florida news (3 articles, max 1 per query for diversity)
   console.log('\n[Florida News]');
-  const flArticles = await fetchArticles(FLORIDA_QUERIES, FLORIDA_COUNT, 'FL', immArticles);
+  const flArticles = await fetchArticles(FLORIDA_QUERIES, FLORIDA_COUNT, 'FL', immArticles, 1);
 
   const allArticles = [...immArticles, ...flArticles];
 
