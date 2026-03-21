@@ -1,14 +1,15 @@
-const { chromium } = require('playwright');
+const { execSync } = require('child_process');
+const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
 const NEWS_FILE = path.join(__dirname, '..', 'public', 'news.json');
-const MAX_NEWS = 6;
+const MAX_NEWS = 5;
 
 const SEARCH_QUERIES = [
-  'Korean American immigration policy news',
-  'immigration social welfare policy affecting Asian Americans',
-  'Korean community deportation visa healthcare news',
+  'Korean American immigration policy',
+  'Asian American immigrant welfare healthcare',
+  'Korean community deportation visa',
 ];
 
 function getToday() {
@@ -38,7 +39,6 @@ function extractSource(url) {
     const parts = hostname.split('.');
     if (parts.length >= 2) {
       const name = parts[parts.length - 2];
-      // Map common domains
       const map = {
         'nytimes': 'The New York Times',
         'washingtonpost': 'The Washington Post',
@@ -81,28 +81,89 @@ function isDuplicate(existing, title) {
   });
 }
 
+function fetchUrl(url) {
+  return new Promise((resolve, reject) => {
+    const req = https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0' } }, (res) => {
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        fetchUrl(res.headers.location).then(resolve).catch(reject);
+        return;
+      }
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => resolve(data));
+    });
+    req.on('error', reject);
+    req.setTimeout(15000, () => { req.destroy(); reject(new Error('Timeout')); });
+  });
+}
+
+function parseRssItems(xml) {
+  const items = [];
+  const itemRegex = /<item>([\s\S]*?)<\/item>/g;
+  let match;
+  while ((match = itemRegex.exec(xml)) !== null) {
+    const block = match[1];
+    const get = (tag) => {
+      const m = block.match(new RegExp(`<${tag}[^>]*><!\\[CDATA\\[([\\s\\S]*?)\\]\\]><\\/${tag}>|<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`));
+      return m ? (m[1] || m[2] || '').trim() : '';
+    };
+    const title = get('title').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#39;/g, "'").replace(/&quot;/g, '"');
+    const link = get('link');
+    const rawDesc = get('description');
+    const description = rawDesc
+      // First decode HTML entities so tags become real tags
+      .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&')
+      .replace(/&#39;/g, "'").replace(/&quot;/g, '"')
+      // Then strip all HTML tags
+      .replace(/<[^>]*>/g, ' ')
+      .replace(/&nbsp;/g, ' ')
+      .replace(/\s+/g, ' ').trim();
+    const source = get('source');
+    const pubDate = get('pubDate');
+    if (title && link) {
+      items.push({ title, link, description, source, pubDate });
+    }
+  }
+  return items;
+}
+
+function translateWithClaude(articles) {
+  const prompt = `You are a Korean translator for a Korean American community website. Translate the following news articles' titles and summaries into Korean. The audience is Korean-speaking immigrants in the US.
+
+For each article, provide:
+1. A Korean title (natural, not literal translation)
+2. A Korean summary (2-3 sentences, informative for Korean immigrant readers)
+
+Articles:
+${articles.map((a, i) => `[${i + 1}] Title: ${a.titleEn}\nSummary: ${a.summaryEn}`).join('\n\n')}
+
+Respond in this exact JSON format (no markdown, no code blocks):
+[${articles.map((_, i) => `{"titleKr": "한국어 제목 ${i + 1}", "summaryKr": "한국어 요약 ${i + 1}"}`).join(', ')}]`;
+
+  try {
+    const result = execSync(
+      `/opt/homebrew/bin/claude -p ${JSON.stringify(prompt)} --model haiku`,
+      { encoding: 'utf-8', timeout: 60000, maxBuffer: 1024 * 1024 }
+    ).trim();
+    // Extract JSON array from response
+    const jsonMatch = result.match(/\[[\s\S]*\]/);
+    if (jsonMatch) {
+      return JSON.parse(jsonMatch[0]);
+    }
+  } catch (e) {
+    console.error(`  Translation error: ${e.message}`);
+  }
+  return null;
+}
+
 (async () => {
   const today = getToday();
   console.log(`\n=== Daily News Fetch: ${today} ===\n`);
 
-  // Load existing news
   let existing = [];
   try {
     existing = JSON.parse(fs.readFileSync(NEWS_FILE, 'utf-8'));
   } catch {}
-
-  const browser = await chromium.launch({
-    headless: true,
-    channel: 'chrome',
-    args: ['--disable-blink-features=AutomationControlled'],
-  });
-  const context = await browser.newContext({
-    userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
-  });
-  const page = await context.newPage();
-  await page.addInitScript(() => {
-    Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-  });
 
   const newArticles = [];
 
@@ -112,69 +173,24 @@ function isDuplicate(existing, title) {
     console.log(`Searching: "${query}"...`);
 
     try {
-      // Use Google News search
-      const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}&tbm=nws&tbs=qdr:w`;
-      await page.goto(searchUrl, { waitUntil: 'load', timeout: 20000 });
-      await page.waitForTimeout(3000);
+      const rssUrl = `https://news.google.com/rss/search?q=${encodeURIComponent(query + ' when:7d')}&hl=en-US&gl=US&ceid=US:en`;
+      const xml = await fetchUrl(rssUrl);
+      const items = parseRssItems(xml);
 
-      const results = await page.evaluate(() => {
-        const items = [];
-        // Google News results
-        const articles = document.querySelectorAll('[data-news-doc-id], div.SoaBEf, div.dbsr');
-        for (const article of articles) {
-          const linkEl = article.querySelector('a[href]');
-          const titleEl = article.querySelector('[role="heading"], .n0jPhd, .nDgy9d, .JheGif');
-          const snippetEl = article.querySelector('.GI74Re, .Y3v8qd, .s3v9rd');
-          const sourceEl = article.querySelector('.NUnG9d span, .WF4CUc, .CEMjEf span');
+      console.log(`  Found ${items.length} results`);
 
-          if (linkEl && titleEl) {
-            const href = linkEl.getAttribute('href') || '';
-            items.push({
-              title: titleEl.textContent?.trim() || '',
-              url: href.startsWith('/url?q=') ? decodeURIComponent(href.split('/url?q=')[1].split('&')[0]) : href,
-              snippet: snippetEl?.textContent?.trim() || '',
-              source: sourceEl?.textContent?.trim() || '',
-            });
-          }
-        }
-
-        // Fallback: generic search results
-        if (items.length === 0) {
-          const genericResults = document.querySelectorAll('.g');
-          for (const r of genericResults) {
-            const a = r.querySelector('a[href]');
-            const h3 = r.querySelector('h3');
-            const desc = r.querySelector('.VwiC3b, .IsZvec');
-            if (a && h3) {
-              items.push({
-                title: h3.textContent?.trim() || '',
-                url: a.href || '',
-                snippet: desc?.textContent?.trim() || '',
-                source: '',
-              });
-            }
-          }
-        }
-
-        return items;
-      });
-
-      console.log(`  Found ${results.length} results`);
-
-      for (const r of results) {
+      for (const item of items) {
         if (newArticles.length >= MAX_NEWS) break;
-        if (!r.title || !r.url || !r.url.startsWith('http')) continue;
-        if (isDuplicate(existing, r.title) || isDuplicate(newArticles, r.title)) continue;
+        if (!item.title || !item.link) continue;
+        if (isDuplicate(existing, item.title) || isDuplicate(newArticles, item.title)) continue;
 
-        // Skip irrelevant results
-        const titleLower = r.title.toLowerCase();
+        const titleLower = item.title.toLowerCase();
         if (titleLower.includes('south korea') && !titleLower.includes('american') && !titleLower.includes('immigrant') && !titleLower.includes('u.s.')) continue;
 
-        const tags = classifyTag(r.title, r.snippet);
-        const source = r.source || extractSource(r.url);
+        const tags = classifyTag(item.title, item.description);
+        const source = item.source || extractSource(item.link);
 
-        // Trim snippet to ~3 sentences
-        let snippet = r.snippet;
+        let snippet = item.description;
         const sentences = snippet.split(/(?<=[.!?])\s+/);
         if (sentences.length > 3) {
           snippet = sentences.slice(0, 3).join(' ');
@@ -182,34 +198,41 @@ function isDuplicate(existing, title) {
 
         newArticles.push({
           date: today,
-          titleEn: r.title,
-          titleKr: r.title, // placeholder - will be translated if possible
-          summaryEn: snippet,
-          summaryKr: snippet, // placeholder
+          titleEn: item.title,
+          titleKr: item.title,
+          summaryEn: snippet || item.title,
+          summaryKr: snippet || item.title,
           ...tags,
-          url: r.url,
+          url: item.link,
           source: source,
         });
 
-        console.log(`  [NEW] ${r.title.substring(0, 60)}...`);
+        console.log(`  [NEW] ${item.title.substring(0, 60)}...`);
       }
     } catch (e) {
       console.error(`  Error: ${e.message}`);
     }
-
-    await page.waitForTimeout(2000);
   }
-
-  await browser.close();
 
   if (newArticles.length === 0) {
     console.log('\nNo new articles found.');
     return;
   }
 
-  // Combine: new articles first, then keep recent existing (up to MAX_NEWS total)
-  const combined = [...newArticles, ...existing].slice(0, MAX_NEWS);
+  // Translate to Korean using claude CLI
+  console.log(`\nTranslating ${newArticles.length} articles to Korean...`);
+  const translations = translateWithClaude(newArticles);
+  if (translations && translations.length === newArticles.length) {
+    for (let i = 0; i < newArticles.length; i++) {
+      newArticles[i].titleKr = translations[i].titleKr || newArticles[i].titleKr;
+      newArticles[i].summaryKr = translations[i].summaryKr || newArticles[i].summaryKr;
+    }
+    console.log('  Translation complete.');
+  } else {
+    console.log('  Translation failed, using English as fallback.');
+  }
 
+  const combined = [...newArticles, ...existing].slice(0, MAX_NEWS);
   fs.writeFileSync(NEWS_FILE, JSON.stringify(combined, null, 2));
 
   console.log(`\n==========================================`);

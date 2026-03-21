@@ -1,7 +1,7 @@
 #!/bin/bash
 # Daily news update: fetch news, commit, push to trigger Vercel rebuild
 
-cd /Users/seongho/Desktop/sarang-house
+cd /Users/seongho/Desktop/auto/sarang-house
 
 echo "$(date): Starting daily news update..."
 
