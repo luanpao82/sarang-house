@@ -1,5 +1,60 @@
 [
   {
+    "date": "2026-03-30",
+    "titleEn": "Is AI denying your insurance claim? It's happening way more than you think. - The Florida Times-Union",
+    "titleKr": "인공지능의 보험 청구 거절, 생각보다 훨씬 광범위",
+    "summaryEn": "Is AI denying your insurance claim? It's happening way more than you think. The Florida Times-Union",
+    "summaryKr": "인공지능을 활용한 보험 청구 거절이 통계적 예상보다 훨씬 광범위하게 발생하고 있습니다. 이민자 가정을 포함한 취약 계층이 부당한 보험 거절로 인해 더 큰 타격을 받을 수 있습니다.",
+    "tag": "Healthcare",
+    "tagKr": "건강보험",
+    "url": "https://www.jacksonville.com/story/news/healthcare/2026/03/30/ai-is-denying-health-care-claims/88221783007/",
+    "source": "jacksonville.com"
+  },
+  {
+    "date": "2026-03-30",
+    "titleEn": "States pay Deloitte, others millions to comply with Trump law to cut Medicaid rolls",
+    "titleKr": "메디케이드 축소 정책 이행에 주정부들이 수백만 달러 투자",
+    "summaryEn": "States pay Deloitte, others millions to comply with Trump law to cut Medicaid rolls CBS News",
+    "summaryKr": "트럼프 정책에 따른 메디케이드 축소를 구현하기 위해 주정부들이 대형 컨설팅사에 수백만 달러를 지출하고 있습니다. 저소득층 및 이민자들의 의료 혜택 축소로 이어질 가능성이 높아지고 있습니다.",
+    "tag": "Healthcare",
+    "tagKr": "건강보험",
+    "url": "https://www.cbsnews.com/news/trump-medicaid-snap-aid-states-consultants/",
+    "source": "CBS News"
+  },
+  {
+    "date": "2026-03-30",
+    "titleEn": "Cubans in Central Florida feel a change is coming, but concerns about deportations also rise",
+    "titleKr": "플로리다 쿠바 이민자들, 강제추방 우려 속 변화 대비",
+    "summaryEn": "Cubans in Central Florida feel a change is coming, but concerns about deportations also rise Orlando Sentinel",
+    "summaryKr": "중부 플로리다의 쿠바계 이민자들은 정책 변화가 임박했다고 느끼면서도 강제추방 위험에 대한 불안감을 드러내고 있습니다. 불확실한 정책 환경 속에서 커뮤니티의 불안이 지속적으로 증가하고 있습니다.",
+    "tag": "Immigration",
+    "tagKr": "이민",
+    "url": "https://www.orlandosentinel.com/2026/03/30/cubans-in-central-florida-feel-a-change-is-coming-but-concerns-about-deportations-also-rise/",
+    "source": "orlandosentinel.com"
+  },
+  {
+    "date": "2026-03-30",
+    "titleEn": "Millions protest immigration policies - China Daily",
+    "titleKr": "이민정책 항의 시위 전 세계 확산",
+    "summaryEn": "Millions protest immigration policies China Daily - Global Edition",
+    "summaryKr": "이민정책 강화에 반대하는 대규모 항의 시위가 전 세계적으로 진행되고 있습니다. 이민자 커뮤니티와 인권 단체들이 정책 변화에 대한 우려를 표현하고 있습니다.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://global.chinadaily.com.cn/a/202603/30/WS69c9dbe9a310d6866eb409b0.html",
+    "source": "global.chinadaily.com.cn"
+  },
+  {
+    "date": "2026-03-30",
+    "titleEn": "Millions march Against Trump’s war and immigration policies",
+    "titleKr": "트럼프의 전쟁·이민정책 반대 수백만 명 시위",
+    "summaryEn": "Millions march Against Trump’s war and immigration policies International Viewpoint",
+    "summaryKr": "트럼프 정부의 전쟁 및 이민정책에 반대하는 대규모 시위가 확산되고 있습니다. 이민 커뮤니티를 포함한 광범위한 시민들이 정책 변화에 저항하며 목소리를 높이고 있습니다.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://internationalviewpoint.org/Millions-march-Against-Trump-s-war-and-immigration-policies",
+    "source": "internationalviewpoint.org"
+  },
+  {
     "date": "2026-03-28",
     "titleEn": "Judge rejects lawsuit against Polk schools over book challenges",
     "titleKr": "polk 카운티 학교 도서 검열, 소송 기각",
