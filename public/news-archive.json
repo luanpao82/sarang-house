@@ -1,5 +1,49 @@
 [
   {
+    "date": "2026-03-31",
+    "titleEn": "Has Florida outgrown a part-time Legislature?",
+    "titleKr": "플로리다주, 부분 시간제 의회체계로 충분할까?",
+    "summaryEn": "Has Florida outgrown a part-time Legislature? Tampa Bay Times",
+    "summaryKr": "급속하게 성장하는 플로리다주의 부분 시간제 의회 체계가 주의 규모에 부족할 수 있다는 논의가 제기되고 있습니다. 의회 구조 개선은 이민 정책, 교육, 의료 등 플로리다 주민들의 삶에 직결되는 중요한 의사결정에 영향을 미칩니다.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://www.tampabay.com/news/florida-politics/2026/03/31/has-florida-outgrown-part-time-legislature/",
+    "source": "tampabay.com"
+  },
+  {
+    "date": "2026-03-31",
+    "titleEn": "Georgia proposal could take DNA swabs from immigrants in custody for minor offenses",
+    "titleKr": "조지아주, 경미 범죄 체포 이민자 DNA 채취 추진",
+    "summaryEn": "Georgia proposal could take DNA swabs from immigrants in custody for minor offenses The Washington Post",
+    "summaryKr": "조지아주가 경미 범죄로 체포된 이민자들로부터 DNA를 채취하는 법안을 추진 중입니다. 이는 이민자의 개인정보 보호와 인권 문제로 큰 논란이 되고 있으며, 미국 내 이민자 커뮤니티에 심각한 위협이 될 수 있습니다.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://www.washingtonpost.com/business/2026/03/31/immigration-dna-collection-georgia/a6bfb904-2cb7-11f1-aac2-f56b5ccad184_story.html",
+    "source": "The Washington Post"
+  },
+  {
+    "date": "2026-03-31",
+    "titleEn": "BOK chief nominee shrugs off concerns over weakening won",
+    "titleKr": "한국은행 총재 후보자, 원화 약세 우려 일축",
+    "summaryEn": "BOK chief nominee shrugs off concerns over weakening won The Korea Times",
+    "summaryKr": "한국은행 총재 후보자가 원화 약세에 대한 시장 우려를 불식시켰습니다. 원화 환율은 한국 경제뿐만 아니라 미국의 한인들이 국내 가족에게 보내는 송금액과 가족들의 생활에 직접적인 영향을 미칩니다.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://www.koreatimes.co.kr/economy/policy/20260331/bok-chief-nominee-shrugs-off-concerns-over-weakening-won",
+    "source": "koreatimes.co.kr"
+  },
+  {
+    "date": "2026-03-31",
+    "titleEn": "[INTERVIEW] US sees Korea as reliable investment partner, ruling party lawmaker says",
+    "titleKr": "미국, 한국을 신뢰할 수 있는 투자 파트너로 평가",
+    "summaryEn": "[INTERVIEW] US sees Korea as reliable investment partner, ruling party lawmaker says The Korea Times",
+    "summaryKr": "미국의 여당 의원이 한국을 신뢰할 수 있는 투자 파트너로 평가했습니다. 이는 미국-한국 경제 협력의 강화를 의미하며, 양국 간 무역 및 투자 확대에 긍정적인 신호로 작용할 것으로 예상됩니다.",
+    "tag": "Policy",
+    "tagKr": "정책",
+    "url": "https://www.koreatimes.co.kr/amp/southkorea/politics/20260331/us-sees-korea-as-reliable-investment-partner-ruling-party-lawmaker-says",
+    "source": "koreatimes.co.kr"
+  },
+  {
     "date": "2026-03-30",
     "titleEn": "Is AI denying your insurance claim? It's happening way more than you think. - The Florida Times-Union",
     "titleKr": "인공지능의 보험 청구 거절, 생각보다 훨씬 광범위",
