@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Growing Korean Partnership – UCF SPA</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #122952;
+    --navy2: #1B3A6B;
+    --gold: #C9973A;
+    --light-bg: #F4F7FB;
+    --white: #ffffff;
+    --text-dark: #1a1a2e;
+  }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #000;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  /* ── Slide container ── */
+  .slideshow {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .slide.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  /* ── Navigation ── */
+  .nav {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .nav button {
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.4);
+    color: #fff;
+    padding: 8px 22px;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 14px;
+    backdrop-filter: blur(8px);
+    transition: background 0.2s;
+  }
+  .nav button:hover { background: rgba(255,255,255,0.35); }
+  .nav .dots {
+    display: flex;
+    gap: 8px;
+  }
+  .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.35);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .dot.active { background: var(--gold); }
+
+  /* ────────────────────────────────────────────
+     SLIDE 1  –  Title
+  ──────────────────────────────────────────── */
+  #slide1 {
+    background: var(--navy);
+    flex-direction: row;
+  }
+  .s1-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 64px 56px;
+    position: relative;
+  }
+  .s1-left::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 6px;
+    background: var(--gold);
+  }
+  .s1-tag {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .s1-title {
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+  .s1-title span { color: var(--gold); }
+  .s1-subtitle {
+    font-size: clamp(14px, 1.6vw, 18px);
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+    max-width: 480px;
+    margin-bottom: 40px;
+  }
+  .s1-footer {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 1px;
+  }
+  .s1-right {
+    width: 280px;
+    background: linear-gradient(160deg, #1e3f78 0%, var(--navy) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 40px 20px;
+    border-left: 1px solid rgba(255,255,255,0.08);
+  }
+  .badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .badge-icon {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px;
+  }
+  .badge-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+  }
+
+  /* ────────────────────────────────────────────
+     SLIDE 2  –  Growing Interest
+  ──────────────────────────────────────────── */
+  #slide2 {
+    background: var(--light-bg);
+  }
+  .s2-header {
+    background: var(--navy2);
+    padding: 28px 56px 24px;
+    position: relative;
+  }
+  .s2-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 56px;
+    width: 60px; height: 4px;
+    background: var(--gold);
+  }
+  .slide-title {
+    font-size: clamp(22px, 3vw, 36px);
+    font-weight: 800;
+    color: var(--white);
+  }
+  .slide-page {
+    position: absolute;
+    right: 48px; bottom: 12px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+  }
+  .s2-body {
+    flex: 1;
+    display: flex;
+    gap: 0;
+    padding: 40px 56px;
+    overflow: hidden;
+  }
+  .s2-growth {
+    flex: 0 0 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .s2-growth-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.3;
+  }
+  .s2-growth-sub {
+    font-size: 13px;
+    color: #666;
+  }
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    flex: 1;
+    position: relative;
+    margin-top: 8px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 18px; top: 10px; bottom: 10px;
+    width: 2px;
+    background: var(--gold);
+    opacity: 0.3;
+  }
+  .tl-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 0;
+  }
+  .tl-dot {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--navy2);
+    color: var(--white);
+    font-weight: 800;
+    font-size: 13px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .tl-dot.current { background: var(--gold); }
+  .tl-bar-wrap { flex: 1; }
+  .tl-bar {
+    height: 22px;
+    border-radius: 4px;
+    background: var(--navy2);
+    opacity: 0.15;
+    transition: width 0.8s ease;
+  }
+  .tl-bar.y23 { width: 30%; }
+  .tl-bar.y24 { width: 50%; }
+  .tl-bar.y25 { width: 75%; }
+  .tl-bar.y26 { width: 100%; background: var(--gold); opacity: 0.6; }
+
+  .s2-divider { width: 1px; background: rgba(0,0,0,0.08); margin: 0 40px; }
+
+  .s2-points {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+  }
+  .point-card {
+    display: flex;
+    gap: 20px;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 18px 22px;
+    box-shadow: 0 2px 12px rgba(27,58,107,0.07);
+  }
+  .point-num {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--navy2);
+    color: var(--white);
+    font-weight: 800;
+    font-size: 16px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .point-body h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .point-body p  { font-size: 13px; color: #555; line-height: 1.5; }
+
+  .s2-footer {
+    padding: 12px 56px;
+    font-size: 12px;
+    color: rgba(27,58,107,0.4);
+    border-top: 1px solid rgba(0,0,0,0.07);
+  }
+
+  /* ────────────────────────────────────────────
+     SLIDE 3  –  Enrollment & Revenue
+  ──────────────────────────────────────────── */
+  #slide3 { background: var(--light-bg); }
+  .s3-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 56px;
+    gap: 24px;
+  }
+  .stat-row {
+    display: flex;
+    gap: 24px;
+  }
+  .stat-card {
+    flex: 1;
+    background: var(--navy2);
+    border-radius: 14px;
+    padding: 28px 28px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    overflow: hidden;
+  }
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--gold);
+  }
+  .stat-icon {
+    font-size: 28px;
+    opacity: 0.8;
+  }
+  .stat-number {
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1;
+  }
+  .stat-number.gold { color: var(--gold); }
+  .stat-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+    text-align: center;
+    line-height: 1.4;
+  }
+  .revenue-row {
+    display: flex;
+    gap: 24px;
+  }
+  .rev-card {
+    flex: 1;
+    background: var(--white);
+    border-radius: 14px;
+    padding: 24px 28px;
+    box-shadow: 0 2px 16px rgba(27,58,107,0.07);
+    border-left: 4px solid var(--navy2);
+  }
+  .rev-card.total-card {
+    border-left-color: var(--gold);
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 0 auto;
+    min-width: 320px;
+  }
+  .rev-label { font-size: 13px; color: #888; margin-bottom: 6px; }
+  .rev-amount { font-size: clamp(22px, 2.5vw, 32px); font-weight: 800; color: var(--navy); }
+  .rev-detail { font-size: 12px; color: #aaa; margin-top: 4px; }
+  .total-label { font-size: 14px; color: rgba(255,255,255,0.7); }
+  .total-amount { font-size: clamp(24px, 3vw, 38px); font-weight: 900; color: var(--gold); }
+
+  /* ────────────────────────────────────────────
+     SLIDE 4  –  Support & Integration
+  ──────────────────────────────────────────── */
+  #slide4 { background: var(--light-bg); }
+  .s4-body {
+    flex: 1;
+    display: flex;
+    gap: 32px;
+    padding: 32px 56px;
+    overflow: hidden;
+  }
+  .s4-left {
+    flex: 0 0 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .fee-card {
+    background: var(--navy2);
+    border-radius: 14px;
+    padding: 28px 22px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .fee-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--gold);
+  }
+  .fee-dollar { font-size: 36px; font-weight: 900; color: var(--gold); }
+  .fee-amount { font-size: 26px; font-weight: 800; color: var(--white); line-height: 1; margin-top: 4px; }
+  .fee-per { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 8px; line-height: 1.5; }
+  .fee-note { font-size: 11px; color: var(--gold); margin-top: 10px; font-style: italic; }
+
+  .s4-right {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .support-card {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 24px 22px;
+    box-shadow: 0 2px 12px rgba(27,58,107,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .support-icon {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    background: var(--navy2);
+    color: var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .support-title { font-size: 15px; font-weight: 700; color: var(--navy); }
+  .support-desc  { font-size: 13px; color: #555; line-height: 1.5; }
+
+  /* ────────────────────────────────────────────
+     SLIDE 5  –  5-Year Projection
+  ──────────────────────────────────────────── */
+  #slide5 {
+    background: var(--navy);
+  }
+  .s5-header {
+    padding: 36px 56px 28px;
+    position: relative;
+  }
+  .s5-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 56px;
+    width: 60px; height: 4px;
+    background: var(--gold);
+  }
+  .s5-title { font-size: clamp(22px, 3vw, 38px); font-weight: 900; color: var(--white); }
+  .s5-subtitle { font-size: 14px; color: rgba(255,255,255,0.5); margin-top: 6px; }
+  .s5-body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 24px 56px 48px;
+  }
+  .proj-panel {
+    flex: 1;
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    padding: 32px 32px;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .proj-panel.current { border-color: rgba(255,255,255,0.12); }
+  .proj-panel.target  { border-color: var(--gold); background: rgba(201,151,58,0.08); }
+  .proj-year { font-size: 12px; font-weight: 700; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; margin-bottom: 20px; }
+  .proj-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+  .proj-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: var(--navy2);
+    color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  .proj-icon.gold-bg { background: var(--gold); color: var(--navy); }
+  .proj-info { flex: 1; }
+  .proj-count { font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 2px; }
+  .proj-amount { font-size: clamp(18px, 2vw, 26px); font-weight: 800; color: var(--white); }
+  .proj-amount.gold { color: var(--gold); }
+  .proj-detail { font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 2px; }
+  .proj-total-row {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+  }
+  .proj-total-label { font-size: 13px; color: rgba(255,255,255,0.5); }
+  .proj-total-amount { font-size: clamp(22px, 2.5vw, 32px); font-weight: 900; color: var(--white); }
+  .proj-total-amount.gold { color: var(--gold); }
+
+  .proj-arrow {
+    flex: 0 0 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  .arrow-line {
+    width: 60px; height: 2px;
+    background: var(--gold);
+    position: relative;
+  }
+  .arrow-line::after {
+    content: '▶';
+    position: absolute;
+    right: -12px; top: 50%;
+    transform: translateY(-50%);
+    color: var(--gold);
+    font-size: 14px;
+  }
+  .arrow-badge {
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 900;
+    font-size: 20px;
+    padding: 10px 18px;
+    border-radius: 12px;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .arrow-sub { font-size: 11px; color: rgba(255,255,255,0.4); text-align: center; }
+
+  .s5-disclaimer {
+    padding: 0 56px 16px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.25);
+  }
+
+  /* keyboard hint */
+  .hint {
+    position: fixed;
+    top: 16px; right: 20px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.25);
+    z-index: 200;
+  }
+</style>
+</head>
+<body>
+
+<div class="hint">← → Arrow keys or click to navigate</div>
+
+<div class="slideshow">
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 1 — Title
+  ══════════════════════════════════════════ -->
+  <div class="slide active" id="slide1">
+    <div class="s1-left">
+      <div class="s1-tag">Faculty Meeting 2026</div>
+      <div class="s1-title">Growing Korean<br><span>Partnership</span></div>
+      <div class="s1-subtitle">
+        UCF School of Public Administration<br>
+        International Enrollment &amp; Visiting Scholar Update
+      </div>
+      <div class="s1-footer">UCF &nbsp;|&nbsp; School of Public Administration</div>
+    </div>
+    <div class="s1-right">
+      <div class="badge">
+        <div class="badge-icon">🎓</div>
+        <div class="badge-label">MPA Students</div>
+      </div>
+      <div style="width:1px;height:40px;background:rgba(255,255,255,0.1)"></div>
+      <div class="badge">
+        <div class="badge-icon">🔬</div>
+        <div class="badge-label">Visiting Scholars</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 2 — Growing Interest
+  ══════════════════════════════════════════ -->
+  <div class="slide" id="slide2">
+    <div class="s2-header">
+      <div class="slide-title">Growing Interest from South Korea</div>
+      <div class="slide-page">2</div>
+    </div>
+    <div class="s2-body">
+      <div class="s2-growth">
+        <div class="s2-growth-title">Steady Growth<br>in Applications</div>
+        <div class="s2-growth-sub">Government-funded scholarship programs create high-quality, motivated applicants</div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot">'23</div>
+            <div class="tl-bar-wrap"><div class="tl-bar y23"></div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">'24</div>
+            <div class="tl-bar-wrap"><div class="tl-bar y24"></div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">'25</div>
+            <div class="tl-bar-wrap"><div class="tl-bar y25"></div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot current">'26</div>
+            <div class="tl-bar-wrap"><div class="tl-bar y26"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="s2-divider"></div>
+
+      <div class="s2-points">
+        <div class="point-card">
+          <div class="point-num">1</div>
+          <div class="point-body">
+            <h4>Government-Funded Programs</h4>
+            <p>South Korean government-funded scholarships require host institutions to meet strict internal ranking criteria, driving qualified applicants our way.</p>
+          </div>
+        </div>
+        <div class="point-card">
+          <div class="point-num">2</div>
+          <div class="point-body">
+            <h4>UCF SPA Consistently Qualifies</h4>
+            <p>UCF SPA's programs have consistently met South Korea's eligibility benchmarks, making us a preferred destination for funded students.</p>
+          </div>
+        </div>
+        <div class="point-card">
+          <div class="point-num">3</div>
+          <div class="point-body">
+            <h4>Steady Applicant Increase</h4>
+            <p>As a result, we are seeing a reliable and growing pipeline of qualified applicants for MPA and Visiting Scholar positions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="s2-footer">UCF School of Public Administration &nbsp;|&nbsp; International Engagement</div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 3 — Current Enrollment & Revenue
+  ══════════════════════════════════════════ -->
+  <div class="slide" id="slide3">
+    <div class="s2-header">
+      <div class="slide-title">Current Enrollment &amp; Revenue</div>
+      <div class="slide-page">3</div>
+    </div>
+    <div class="s3-body">
+      <div class="stat-row">
+        <div class="stat-card">
+          <div class="stat-icon">🎓</div>
+          <div class="stat-number">10</div>
+          <div class="stat-label">MPA Students</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🔬</div>
+          <div class="stat-number">3</div>
+          <div class="stat-label">Visiting Scholars</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📋</div>
+          <div class="stat-number gold">TBD</div>
+          <div class="stat-label">Incoming MPA Cohort</div>
+        </div>
+      </div>
+
+      <div class="revenue-row">
+        <div class="rev-card">
+          <div class="rev-label">MPA Tuition Revenue</div>
+          <div class="rev-amount">$232,840</div>
+          <div class="rev-detail">/ year &nbsp;|&nbsp; 10 students × $23,284/yr &nbsp;(@ $1,194/credit × 39 credits)</div>
+        </div>
+        <div class="rev-card">
+          <div class="rev-label">Visiting Scholar Fees</div>
+          <div class="rev-amount">$30,000</div>
+          <div class="rev-detail">/ year &nbsp;|&nbsp; 3 scholars × $10,000/yr &nbsp;(Research &amp; Training Fee)</div>
+        </div>
+        <div class="rev-card total-card">
+          <div>
+            <div class="total-label">Current Annual Revenue Total</div>
+          </div>
+          <div class="total-amount">~$262,840</div>
+        </div>
+      </div>
+    </div>
+    <div class="s2-footer">UCF School of Public Administration &nbsp;|&nbsp; International Engagement</div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 4 — Support & Integration
+  ══════════════════════════════════════════ -->
+  <div class="slide" id="slide4">
+    <div class="s2-header">
+      <div class="slide-title">Support &amp; Integration &nbsp;|&nbsp; CPNM</div>
+      <div class="slide-page">4</div>
+    </div>
+    <div class="s4-body">
+      <div class="s4-left">
+        <div class="fee-card">
+          <div class="fee-dollar">$</div>
+          <div class="fee-amount">10,000</div>
+          <div class="fee-per">per Visiting Scholar<br>per Year</div>
+          <div class="fee-note">Research &amp; Training Fee<br>Coordinated with CPNM</div>
+        </div>
+      </div>
+
+      <div class="s4-right">
+        <div class="support-card">
+          <div class="support-icon">O</div>
+          <div class="support-title">Office Space &amp; Desks</div>
+          <div class="support-desc">Coordinating with CPNM to provide dedicated office space and desks for Visiting Scholars.</div>
+        </div>
+        <div class="support-card">
+          <div class="support-icon">F</div>
+          <div class="support-title">Faculty Supervision</div>
+          <div class="support-desc">Pairing scholars with faculty supervisors to guide their research activities throughout their stay.</div>
+        </div>
+        <div class="support-card">
+          <div class="support-icon">R</div>
+          <div class="support-title">Research Assistant Matching</div>
+          <div class="support-desc">Connecting Visiting Scholars with our graduate students as research assistants — mutual benefit.</div>
+        </div>
+        <div class="support-card">
+          <div class="support-icon">A</div>
+          <div class="support-title">Course Auditing</div>
+          <div class="support-desc">Scholars may audit relevant courses, enriching their experience and contributing to classroom diversity.</div>
+        </div>
+      </div>
+    </div>
+    <div class="s2-footer">UCF School of Public Administration &nbsp;|&nbsp; International Engagement</div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 5 — 5-Year Projection
+  ══════════════════════════════════════════ -->
+  <div class="slide" id="slide5">
+    <div class="s5-header">
+      <div class="s5-title">5-Year Revenue Projection</div>
+      <div class="s5-subtitle">If We Grow to 30 MPA + 10 Visiting Scholars</div>
+    </div>
+
+    <div class="s5-body">
+      <!-- Current -->
+      <div class="proj-panel current">
+        <div class="proj-year">Today &nbsp;(2025–26)</div>
+
+        <div class="proj-row">
+          <div class="proj-icon">M</div>
+          <div class="proj-info">
+            <div class="proj-count">10 MPA Students</div>
+            <div class="proj-amount">$232,840 <span style="font-size:14px;font-weight:400;color:rgba(255,255,255,0.4)">/yr</span></div>
+            <div class="proj-detail">$1,194/credit × 39 credits / 2-yr program</div>
+          </div>
+        </div>
+
+        <div class="proj-row">
+          <div class="proj-icon">V</div>
+          <div class="proj-info">
+            <div class="proj-count">3 Visiting Scholars</div>
+            <div class="proj-amount">$30,000 <span style="font-size:14px;font-weight:400;color:rgba(255,255,255,0.4)">/yr</span></div>
+            <div class="proj-detail">3 scholars × $10,000 Research &amp; Training Fee</div>
+          </div>
+        </div>
+
+        <div class="proj-total-row">
+          <div class="proj-total-label">Current Annual Total</div>
+          <div class="proj-total-amount">~$262,840</div>
+        </div>
+      </div>
+
+      <!-- Arrow -->
+      <div class="proj-arrow">
+        <div class="arrow-badge">3×<br><span style="font-size:13px">growth</span></div>
+        <div class="arrow-line"></div>
+        <div class="arrow-sub">5-year target</div>
+      </div>
+
+      <!-- Target -->
+      <div class="proj-panel target">
+        <div class="proj-year">5-Year Target &nbsp;(2030–31)</div>
+
+        <div class="proj-row">
+          <div class="proj-icon gold-bg">M</div>
+          <div class="proj-info">
+            <div class="proj-count">30 MPA Students</div>
+            <div class="proj-amount gold">$698,520 <span style="font-size:14px;font-weight:400;color:rgba(255,255,255,0.4)">/yr</span></div>
+            <div class="proj-detail">30 students × $23,284/yr out-of-state tuition</div>
+          </div>
+        </div>
+
+        <div class="proj-row">
+          <div class="proj-icon gold-bg">V</div>
+          <div class="proj-info">
+            <div class="proj-count">10 Visiting Scholars</div>
+            <div class="proj-amount gold">$100,000 <span style="font-size:14px;font-weight:400;color:rgba(255,255,255,0.4)">/yr</span></div>
+            <div class="proj-detail">10 scholars × $10,000 Research &amp; Training Fee</div>
+          </div>
+        </div>
+
+        <div class="proj-total-row" style="border-color:rgba(201,151,58,0.3)">
+          <div class="proj-total-label">Projected Annual Total</div>
+          <div class="proj-total-amount gold">~$798,520</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="s5-disclaimer">* MPA tuition based on UCF out-of-state rate ($1,194/credit × 39 credits). Revenue is per academic year.</div>
+  </div>
+
+</div><!-- /slideshow -->
+
+<!-- Navigation -->
+<div class="nav">
+  <button onclick="go(-1)">&#8592; Prev</button>
+  <div class="dots" id="dots"></div>
+  <button onclick="go(1)">Next &#8594;</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const dotsEl = document.getElementById('dots');
+  let cur = 0;
+
+  // Build dots
+  slides.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => goTo(i);
+    dotsEl.appendChild(d);
+  });
+
+  function goTo(n) {
+    slides[cur].classList.remove('active');
+    dotsEl.children[cur].classList.remove('active');
+    cur = (n + slides.length) % slides.length;
+    slides[cur].classList.add('active');
+    dotsEl.children[cur].classList.add('active');
+  }
+
+  function go(dir) { goTo(cur + dir); }
+
+  // Keyboard
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') go(1);
+    if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')                    go(-1);
+  });
+
+  // Click anywhere on slide to advance
+  document.querySelectorAll('.slide').forEach(s => {
+    s.addEventListener('click', e => {
+      if (!e.target.closest('button') && !e.target.closest('.dot')) go(1);
+    });
+  });
+</script>
+</body>
+</html>
