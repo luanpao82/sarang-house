@@ -1,46 +1,35 @@
 [
   {
-    "date": "2026-04-09",
-    "titleEn": "US$20 for a jacket, US$280 for tailoring. How demand for tailors is rising",
-    "titleKr": "양복 수선비가 한 벌 가격보다 비싼 현상... 재단사 수요 급증",
-    "summaryEn": "US$20 for a jacket, US$280 for tailoring. How demand for tailors is rising South China Morning Post",
-    "summaryKr": "전문 양복 수선에 대한 수요가 크게 늘어나면서 수선비가 새로운 옷 구매보다 비싸지는 현상이 나타나고 있습니다. 한인 이민자 재단사들의 서비스 가치와 영업 기회가 높아지고 있습니다.",
+    "date": "2026-04-10",
+    "titleEn": "Florida's Embrace of ICE Has Come at a Cost",
+    "titleKr": "Florida's Embrace of ICE Has Come at a Cost",
+    "summaryEn": "Florida's Embrace of ICE Has Come at a Cost Bloomberg.com",
+    "summaryKr": "Florida's Embrace of ICE Has Come at a Cost Bloomberg.com",
+    "tag": "Immigration",
+    "tagKr": "이민",
+    "url": "https://www.bloomberg.com/opinion/articles/2026-04-10/florida-s-ice-crackdown-undermines-public-safety-and-social-trust",
+    "source": "bloomberg.com"
+  },
+  {
+    "date": "2026-04-10",
+    "titleEn": "Sunburn — The morning read of what’s hot in Florida politics — 4.10.26",
+    "titleKr": "Sunburn — The morning read of what’s hot in Florida politics — 4.10.26",
+    "summaryEn": "Sunburn — The morning read of what’s hot in Florida politics — 4.10.26 Florida Politics",
+    "summaryKr": "Sunburn — The morning read of what’s hot in Florida politics — 4.10.26 Florida Politics",
     "tag": "News",
     "tagKr": "뉴스",
-    "url": "https://www.scmp.com/lifestyle/fashion-beauty/article/3349220/us20-jacket-us280-tailoring-how-demand-tailors-rising-us",
-    "source": "scmp.com"
+    "url": "https://floridapolitics.com/archives/789667-sunburn-the-morning-read-of-whats-hot-in-florida-politics-4-10-26/",
+    "source": "floridapolitics.com"
   },
   {
-    "date": "2026-04-09",
-    "titleEn": "Warehouses Eyed for Immigration Detention Spark Fierce Backlash Across US",
-    "titleKr": "이민 수용시설로 창고 전환 계획... 미국 전역에서 강한 반발",
-    "summaryEn": "Warehouses Eyed for Immigration Detention Spark Fierce Backlash Across US National Today",
-    "summaryKr": "미국 정부가 이민 구금을 위해 창고를 전환하려는 계획이 전국적 반발에 직면하고 있습니다. 이는 이민자 공동체의 이민 정책과 구금 시설 운영에 대한 우려를 더욱 증대시키고 있습니다.",
-    "tag": "News",
-    "tagKr": "뉴스",
-    "url": "https://nationaltoday.com/us/nm/san-antonio-nm/news/2026/04/09/warehouses-eyed-for-immigration-detention-spark-fierce-backlash-across-us/",
-    "source": "nationaltoday.com"
-  },
-  {
-    "date": "2026-04-09",
-    "titleEn": "Q&A – Property Taxes vs. Property Insurance",
-    "titleKr": "부동산세 vs. 주택보험: 주택 소유자가 알아야 할 차이점",
-    "summaryEn": "Q&A – Property Taxes vs. Property Insurance 1290 WJNO",
-    "summaryKr": "부동산세와 주택보험은 주택 소유 시 부담해야 하는 서로 다른 두 가지 재정 의무입니다. 플로리다의 한인 이민자 주택 소유자들이 이 두 항목을 정확히 이해하고 준비하는 것이 중요합니다.",
-    "tag": "Healthcare",
-    "tagKr": "건강보험",
-    "url": "https://wjno.iheart.com/content/2026-04-09-qa-property-taxes-vs-property-insurance/",
-    "source": "wjno.iheart.com"
-  },
-  {
-    "date": "2026-04-09",
-    "titleEn": "Still no state budget as Florida schools prepare for expected cuts",
-    "titleKr": "플로리다 주 예산 합의 지연... 학교들 예산 삭감에 대비 중",
-    "summaryEn": "Still no state budget as Florida schools prepare for expected cuts Tampa Bay Times",
-    "summaryKr": "플로리다 주 예산이 아직 확정되지 않으면서 각 학교가 자금 삭감에 대비하고 있습니다. 플로리다에 거주하는 한인 이민자 가족들에게는 자녀 교육의 질과 학교 프로그램 축소가 직접적인 영향을 미칠 수 있는 상황입니다.",
+    "date": "2026-04-10",
+    "titleEn": "Hillsborough will close a K-8 school. A charter version will rise nearby.",
+    "titleKr": "Hillsborough will close a K-8 school. A charter version will rise nearby.",
+    "summaryEn": "Hillsborough will close a K-8 school. A charter version will rise nearby. Tampa Bay Times",
+    "summaryKr": "Hillsborough will close a K-8 school. A charter version will rise nearby. Tampa Bay Times",
     "tag": "Education",
     "tagKr": "교육",
-    "url": "https://www.tampabay.com/news/education/2026/04/09/still-no-state-budget-florida-schools-prepare-expected-cuts/",
+    "url": "https://www.tampabay.com/news/education/2026/04/10/hillsborough-will-close-k-8-school-charter-version-will-rise-nearby/",
     "source": "tampabay.com"
   }
 ]
