@@ -1,5 +1,49 @@
 [
   {
+    "date": "2026-04-13",
+    "titleEn": "Florida has class size rules. This district has struggled to keep up.",
+    "titleKr": "플로리다 학급 규모 제한 규정, 일부 교육청 이행 어려움",
+    "summaryEn": "Florida has class size rules. This district has struggled to keep up. Tampa Bay Times",
+    "summaryKr": "플로리다는 학급 규모를 제한하는 규정을 두고 있지만, 일부 교육청은 이를 충족하는 데 어려움을 겪고 있습니다. 이는 충분한 교사 채용과 학교 시설 부족으로 인한 결과입니다. 한국계를 포함한 이민자 자녀들이 다니는 학교의 학급 규모가 커지면 교육의 질 저하로 이어질 수 있습니다.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://www.tampabay.com/news/education/2026/04/13/florida-has-class-size-rules-this-district-has-struggled-keep-up/",
+    "source": "tampabay.com"
+  },
+  {
+    "date": "2026-04-13",
+    "titleEn": "Investors find profit in state tax law. What is the Blue Ridge Housing loophole?",
+    "titleKr": "투자자들이 플로리다 세제 허점 이용한다 - '블루리지 주택 특례'란?",
+    "summaryEn": "Investors find profit in state tax law. What is the Blue Ridge Housing loophole? AOL.com",
+    "summaryKr": "플로리다의 '블루리지 주택 특례'라 불리는 세제 허점을 투자자들이 이용해 수익을 얻고 있습니다. 이러한 세제 우대로 인해 주택 가격 상승과 임대료 인상이 가속화될 수 있습니다. 저소득 이민자 가정들은 주택 비용 부담이 더욱 커질 수 있어 주의가 필요합니다.",
+    "tag": "Policy",
+    "tagKr": "정책",
+    "url": "https://www.aol.com/news/investors-profit-state-tax-law-173040264.html",
+    "source": "aol.com"
+  },
+  {
+    "date": "2026-04-13",
+    "titleEn": "Where is ICE spending the most money? Florida is tops, data shows",
+    "titleKr": "플로리다, ICE 지출 규모 미국 최대",
+    "summaryEn": "Where is ICE spending the most money? Florida is tops, data shows Naples Daily News",
+    "summaryKr": "최근 공개된 데이터에 따르면 미국 이민세관단속청(ICE)이 플로리다에서 가장 많은 예산을 사용하고 있습니다. 이는 플로리다의 이민자 인구와 단속 활동이 전국에서 가장 활발함을 의미합니다. 이민자 커뮤니티는 증가하는 단속 활동에 더욱 주의를 기울여야 합니다.",
+    "tag": "Immigration",
+    "tagKr": "이민",
+    "url": "https://www.naplesnews.com/story/news/state/2026/04/13/where-in-florida-is-ice-investing-the-most-money-data-tells-the-tale/89499385007/",
+    "source": "naplesnews.com"
+  },
+  {
+    "date": "2026-04-13",
+    "titleEn": "Donald Trump calls Pope Leo 'weak' after pontiff's criticism of war and immigration policies",
+    "titleKr": "트럼프, 교황의 전쟁·이민정책 비판에 '약하다' 반박",
+    "summaryEn": "Donald Trump calls Pope Leo 'weak' after pontiff's criticism of war and immigration policies SBS Australia",
+    "summaryKr": "도널드 트럼프가 전쟁과 이민정책을 비판한 교황 레오를 약하다고 비난했습니다. 이는 이민 강경파인 트럼프와 인도주의적 접근을 강조하는 교황 사이의 정책 갈등을 반영합니다. 이민 커뮤니티는 교황의 지지적 입장에도 불구하고 미국 정부의 강경한 이민 정책이 계속될 수 있다는 우려를 갖고 있습니다.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://www.sbs.com.au/news/article/trump-calls-pope-leo-weak-and-terrible-after-pontiffs-anti-war-message/oogx1f261",
+    "source": "sbs.com.au"
+  },
+  {
     "date": "2026-04-11",
     "titleEn": "Highlands County faces the harsh realities of public funding across the state being diverted to religious and private schools",
     "titleKr": "공교육 예산 감소, 저소득층 학생 피해",
