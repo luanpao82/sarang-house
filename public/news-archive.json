@@ -1,5 +1,60 @@
 [
   {
+    "date": "2026-04-23",
+    "titleEn": "Florida Trend Education",
+    "titleKr": "플로리다 교육 동향",
+    "summaryEn": "Florida Trend Education Florida Trend",
+    "summaryKr": "플로리다의 최근 교육 정책 및 제도 변화에 관한 보도다. 특히 이민자 학생들에 대한 교육 접근성 변화에 주목할 필요가 있다.",
+    "tag": "Education",
+    "tagKr": "교육",
+    "url": "https://www.floridatrend.com/education/2026/04/23/florida-trend-education/",
+    "source": "floridatrend.com"
+  },
+  {
+    "date": "2026-04-23",
+    "titleEn": "Florida, Mamdani on same page? Get priorities straight. | Opinion",
+    "titleKr": "의견: 플로리다의 올바른 우선순위 설정이 필요하다",
+    "summaryEn": "Florida, Mamdani on same page? Get priorities straight. | Opinion Treasure Coast News",
+    "summaryKr": "이 칼럼은 플로리다 주정부가 정책 우선순위를 재검토해야 한다고 주장한다. 현재 이민 관련 정책들이 실질적인 공동체 필요보다 정치적 이슈 중심으로 진행되고 있음을 비판한다.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://www.tcpalm.com/story/opinion/columnists/laurence-reisman/2026/04/23/florida-priorities-vaccines-ai-politics-no-other-issues/89697953007/?gnt-cfr=1&gca-cat=p&gca-uir=false&gca-epti=z11xx30p119550c119550e009980v11xx30&gca-ft=108&gca-ds=sophi",
+    "source": "tcpalm.com"
+  },
+  {
+    "date": "2026-04-23",
+    "titleEn": "Florida wants to bar undocumented immigrant students from public colleges",
+    "titleKr": "플로리다, 무허가 이민자 학생들의 공립대학 입학 금지 추진",
+    "summaryEn": "Florida wants to bar undocumented immigrant students from public colleges WLRN",
+    "summaryKr": "플로리다주가 무허가 이민자 학생들의 공립대학 입학을 제한하려는 법안을 추진 중이다. 이 정책이 통과될 경우 한인 가정을 포함한 이민자 가정의 자녀들의 교육 기회를 심각하게 제약할 수 있다.",
+    "tag": "Education",
+    "tagKr": "교육",
+    "url": "https://www.wlrn.org/immigration/2026-04-23/florida-wants-to-bar-undocumented-immigrant-students-from-public-colleges",
+    "source": "wlrn.org"
+  },
+  {
+    "date": "2026-04-23",
+    "titleEn": "Ireland Joins Germany, US, Canada, UK, Spain, Italy, Mexico, Brazil, Switzerland and Other Countries in Europe and Americas in Coordinating with Japan, China, India, Vietnam, Sri Lanka, Thailand, Philippines and More to Guarantee Emergency Visa Relief",
+    "titleKr": "아일랜드, 국제 긴급 비자 구제 협력 참여",
+    "summaryEn": "Ireland Joins Germany, US, Canada, UK, Spain, Italy, Mexico, Brazil, Switzerland and Other Countries in Europe and Americas in Coordinating with Japan, China, India, Vietnam, Sri Lanka, Thailand, Philippines and More to Guarantee Emergency Visa Relief Travel And Tour World",
+    "summaryKr": "아일랜드를 포함한 전 세계 15개 이상의 국가들이 긴급 상황에서 이민자들을 위한 비자 구제 제도를 함께 추진하기로 합의했다. 이는 위기 상황에서 이민자 보호를 위한 국제 협력의 긍정적인 신호다.",
+    "tag": "Visa",
+    "tagKr": "비자",
+    "url": "https://www.travelandtourworld.com/news/article/ireland-joins-germany-us-canada-uk-spain-italy-mexico-brazil-switzerland-and-other-countries-in-europe-and-americas-in-coordinating-with-japan-china-india-vietnam-sri-lanka-thailand-phil/",
+    "source": "travelandtourworld.com"
+  },
+  {
+    "date": "2026-04-23",
+    "titleEn": "‘China, India or some other hellhole ... ’: Trump reshares anti-immigrant rant as approval rating dips",
+    "titleKr": "트럼프, 지지율 하락 속 이민자 혐오 발언 재공유",
+    "summaryEn": "‘China, India or some other hellhole ... ’: Trump reshares anti-immigrant rant as approval rating dips The Times of India",
+    "summaryKr": "트럼프 전 대통령이 이민자들을 폄하하는 내용을 다시 공유하면서 반이민 감정을 드러냈다. 이러한 정치적 발언은 한인 이민자들을 포함한 이민 공동체에 대한 불안감을 조성하고 있다.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://timesofindia.indiatimes.com/world/us/china-india-or-some-other-hellhole-trump-reshares-anti-immigrant-rant-as-approval-rating-dips/articleshow/130460196.cms",
+    "source": "timesofindia.indiatimes.com"
+  },
+  {
     "date": "2026-04-22",
     "titleEn": "Florida to add legal status on drivers' licenses from 2027: US citizen or legal immigrant",
     "titleKr": "2027년부터 플로리다 운전면허에 법적 신분 표시 추가",
