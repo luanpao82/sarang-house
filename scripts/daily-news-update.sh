@@ -1,9 +1,21 @@
 #!/bin/bash
 # Daily news update: fetch news, commit, push to trigger Vercel rebuild
 
-cd /Users/seongho/Desktop/auto/sarang-house
+cd "$(dirname "$0")/.."
 
-echo "$(date): Starting daily news update..."
+# Pinned to 09:00 US Eastern regardless of the system timezone (machine travels).
+# launchd fires this hourly; the real job runs only at 09:00 ET. Silent exit otherwise.
+if [ "$(TZ='America/New_York' date +%H)" != "09" ]; then
+  exit 0
+fi
+
+echo "$(date): Starting daily news update (09:00 ET)..."
+
+# 일요일은 실행하지 않음 (0=일요일, 미 동부 기준)
+if [ "$(TZ='America/New_York' date +%w)" = "0" ]; then
+  echo "$(date): 일요일(ET) — 뉴스 업데이트 건너뜀"
+  exit 0
+fi
 
 # Fetch news
 /opt/homebrew/bin/node scripts/fetch-news.js
