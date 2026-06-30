@@ -1,5 +1,60 @@
 [
   {
+    "date": "2026-06-30",
+    "titleEn": "Gov. DeSantis OKs new tax rules in Florida. Here’s what to know",
+    "titleKr": "플로리다, 새로운 세금 규정 공식 승인",
+    "summaryEn": "Gov. DeSantis OKs new tax rules in Florida. Here’s what to know WKMG",
+    "summaryKr": "플로리다 주지사가 새로운 세금 규칙을 공식 승인했으며, 이는 주 내 거주자와 사업자들의 세무 부담에 영향을 미칩니다. 이민자 커뮤니티 내 자영업자와 임금 근로자의 세금 의무와 혜택이 달라질 수 있습니다. 개인의 재정 상황에 맞는 세무 전략 수립을 위해 새로운 규정의 상세 내용 검토가 필요합니다.",
+    "tag": "Tax & Finance",
+    "tagKr": "세금/재정",
+    "url": "https://www.clickorlando.com/news/local/2026/06/30/gov-desantis-oks-new-tax-rules-in-florida-heres-what-to-know/",
+    "source": "clickorlando.com"
+  },
+  {
+    "date": "2026-06-30",
+    "titleEn": "Arkansas SNAP restrictions to go into effect July 1",
+    "titleKr": "아칸소주, 7월 1일부터 식품 보조금 제한 시행",
+    "summaryEn": "Arkansas SNAP restrictions to go into effect July 1 Little Rock Public Radio",
+    "summaryKr": "아칸소주가 SNAP(식품 보조 프로그램) 수혜 요건을 강화하는 새로운 규정을 7월 1일부터 시행합니다. 이 정책 변화는 특히 저소득 이민자 가정의 식품 접근성을 크게 제한할 수 있습니다. 근무 요구 사항 강화는 취업 이민자들의 생활 기본 필요를 충족하는 데 실질적 어려움을 초래할 가능성이 높습니다.",
+    "tag": "Welfare",
+    "tagKr": "복지",
+    "url": "https://www.ualrpublicradio.org/local-regional-news/2026-06-29/arkansas-snap-restrictions-to-go-into-effect-july-1?_amp=true",
+    "source": "ualrpublicradio.org"
+  },
+  {
+    "date": "2026-06-30",
+    "titleEn": "Flouting Trump policy, federal judges are freeing immigrants from mandatory detention",
+    "titleKr": "연방 판사들, 이민자 강제 구금 정책에 제동",
+    "summaryEn": "Flouting Trump policy, federal judges are freeing immigrants from mandatory detention Stateline",
+    "summaryKr": "연방 법원이 이민자에 대한 강제 구금을 위헌으로 판단하여 석방을 명령하고 있습니다. 이는 정부의 무기한 구금 정책이 적법절차(due process) 원칙에 위배된다는 판단으로, 이민자 인권 보호에 중요한 법적 선례가 될 것으로 예상됩니다. 이 결정은 현재 구금 중인 이민자뿐만 아니라 향후 이민 집행 정책에도 광범위한 영향을 미칠 수 있습니다.",
+    "tag": "Policy",
+    "tagKr": "정책",
+    "url": "https://stateline.org/2026/06/29/flouting-trump-policy-federal-judges-are-freeing-immigrants-from-mandatory-detention/",
+    "source": "stateline.org"
+  },
+  {
+    "date": "2026-06-30",
+    "titleEn": "Indian talent abroad faces visa hurdles, exploitation and shifting trends",
+    "titleKr": "인도 이민자들, 비자 제약과 착취 문제 심화",
+    "summaryEn": "Indian talent abroad faces visa hurdles, exploitation and shifting trends MSN",
+    "summaryKr": "미국 내 인도 출신 이민자들이 비자 취득 및 갱신 과정에서 심각한 어려움을 겪고 있으며, 근로 환경 악화도 보도되고 있습니다. 특히 전문 기술인력이 비자 제한으로 인한 구직 불안정과 고용주의 착취에 취약해지고 있습니다. 이러한 추세는 숙련된 이민자들의 미국 정착 및 경력 개발에 심각한 영향을 미치고 있습니다.",
+    "tag": "Visa",
+    "tagKr": "비자",
+    "url": "https://www.msn.com/en-in/news/insight/indian-talent-abroad-faces-visa-hurdles-exploitation-and-shifting-trends/gm-GMBBCCC37E?gemSnapshotKey=GMBBCCC37E-snapshot-5&uxmode=ruby",
+    "source": "msn.com"
+  },
+  {
+    "date": "2026-06-30",
+    "titleEn": "The Fight for Birthright Citizenship",
+    "titleKr": "시민권을 둘러싼 법적 논쟁 심화",
+    "summaryEn": "The Fight for Birthright Citizenship The Daily Line",
+    "summaryKr": "미국의 태생지 국적 부여(birthright citizenship) 제도를 둘러싼 헌법적 논쟁이 고조되고 있습니다. 이는 이민자 자녀의 국적 취득 경로와 이민 정책 전반에 직접적인 영향을 미칠 수 있습니다. 향후 대법원 판결은 이민 커뮤니티의 장기적 계획에 중대한 영향을 줄 것으로 예상됩니다.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://www.thedailyline.com/fight-birthright-citizenship",
+    "source": "thedailyline.com"
+  },
+  {
     "date": "2026-06-29",
     "titleEn": "University System Officials Look to Block Undocumented Students",
     "titleKr": "대학 시스템, 미등록 학생 입학 차단 추진",
