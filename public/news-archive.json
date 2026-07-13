@@ -1,5 +1,60 @@
 [
   {
+    "date": "2026-07-13",
+    "titleEn": "Florida poised to adopt new education rules on testing, terrorism and more",
+    "titleKr": "플로리다, 교육 현장의 시험·테러 관련 새 규칙 도입 예정",
+    "summaryEn": "Florida poised to adopt new education rules on testing, terrorism and more Tampa Bay Times",
+    "summaryKr": "플로리다 주 교육청이 학생 평가, 테러 관련 규정 등 새로운 교육 정책을 추진 중이다. 교육 시스템의 구조적 변화가 K-12 학생들의 학습과 평가 방식에 광범위한 영향을 미칠 예정. 한인 자녀를 둔 부모들에게 직결되는 교육 정책 변화로, 자녀 교육 계획 수립에 매우 중요한 정보.",
+    "tag": "Education",
+    "tagKr": "교육",
+    "url": "https://www.tampabay.com/news/education/2026/07/13/florida-poised-adopt-new-education-rules-testing-terrorism-more/",
+    "source": "tampabay.com"
+  },
+  {
+    "date": "2026-07-13",
+    "titleEn": "He Retired to Florida at 70. His Advantage Plan Didn’t Cross the State Line With Him.",
+    "titleKr": "70세 플로리다 퇴직자, 애드밴티지 플랜이 주 경계를 넘지 못하다",
+    "summaryEn": "He Retired to Florida at 70. His Advantage Plan Didn’t Cross the State Line With Him. AOL.com",
+    "summaryKr": "Medicare Advantage 플랜이 주(state) 간 이동 시 적용되지 않는 문제를 다룬 사례 기사. 은퇴자들이 주를 옮길 때 의료보험 혜택이 단절되는 시스템의 문제점을 지적. 고령층 이민자들과 은퇴한 한인 커뮤니티에게는 의료비 부담 증가로 직결되는 중요한 이슈.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://www.aol.com/articles/retired-florida-70-advantage-plan-114323000.html",
+    "source": "aol.com"
+  },
+  {
+    "date": "2026-07-13",
+    "titleEn": "'Full pause': Byron Donalds concerned about Flock surveillance cameras impinging on constitutional rights",
+    "titleKr": "플로크 감시카메라 헌법상 권리 침해 우려, 바이런 도날드 의원 '완전 중단' 촉구",
+    "summaryEn": "'Full pause': Byron Donalds concerned about Flock surveillance cameras impinging on constitutional rights Florida Politics",
+    "summaryKr": "플로리다 연방 의원이 Flock 감시 카메라 시스템이 주민들의 헌법상 권리를 침해한다고 우려를 표명했다. 자동 차량번호판 인식 기술의 광범위한 사용에 따른 개인정보보호 및 프라이버시 침해 문제 제기. 이러한 감시 강화 정책은 이민자 커뮤니티에도 직접적인 영향을 미칠 수 있는 사안.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://floridapolitics.com/archives/807064-byron-donalds-flock-cameras/",
+    "source": "floridapolitics.com"
+  },
+  {
+    "date": "2026-07-13",
+    "titleEn": "KITA Chairman: Foreign Labor, Immigration Policy Tied to Korea's Growth",
+    "titleKr": "KITA 회장: 외국인력과 이민정책, 한국의 경제 성장과 직결",
+    "summaryEn": "KITA Chairman: Foreign Labor, Immigration Policy Tied to Korea's Growth Seoul Economic Daily",
+    "summaryKr": "한국무역협회 회장이 외국인력 수급과 이민정책이 한국의 경제 성장에 중요한 역할을 한다고 강조했다. 한국의 인구감소와 노동력 부족이 경제 활동에 미치는 영향과 국제 인력 흐름의 중요성을 언급. 미국의 이민정책 변화는 한국의 해외 인재 유출 및 역이민 추세와도 직결되어 있는 상황.",
+    "tag": "Policy",
+    "tagKr": "정책",
+    "url": "https://en.sedaily.com/news/2026/07/13/kita-chairman-foreign-labor-immigration-policy-tied-to",
+    "source": "en.sedaily.com"
+  },
+  {
+    "date": "2026-07-13",
+    "titleEn": "Beyond the 70% headline: USCIS report shows H-1B workers are becoming more educated, better paid and incr",
+    "titleKr": "70% 기준 너머: USCIS 보고서, H-1B 취업자들의 교육 수준·연봉 상승 추세 보여",
+    "summaryEn": "Beyond the 70% headline: USCIS report shows H-1B workers are becoming more educated, better paid and incr The Times of India",
+    "summaryKr": "USCIS 보고서에 따르면 H-1B 비자 취업자들의 교육 수준과 연봉이 계속 상승하고 있다. 미국의 전문 인력 이민 정책이 고학력·고소득 이민자 유입을 이끌고 있으며, 특히 IT·엔지니어 종사자인 한인 이민자들에게 긍정적 신호. 정부의 기술인력 수요와 이민자들의 경제적 위상 향상이 동시에 진행 중인 상황.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://timesofindia.indiatimes.com/nri/us-canada-news/beyond-the-70-headline-uscis-report-shows-h-1b-workers-are-becoming-more-educated-better-paid-and-increasingly-concentrated-in-tech/articleshow/132365629.cms",
+    "source": "timesofindia.indiatimes.com"
+  },
+  {
     "date": "2026-07-11",
     "titleEn": "11Th Circuit: Florida’s Stop WOKE Act Unconstitutional, Restricts Speech",
     "titleKr": "연방항소법원: 플로리다의 Stop WOKE법 위헌 판결",
