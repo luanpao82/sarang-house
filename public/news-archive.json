@@ -1,5 +1,60 @@
 [
   {
+    "date": "2026-07-15",
+    "titleEn": "While Tampa Bay schools make an ‘A,’ some parents and educators question if kids are really learning",
+    "titleKr": "탐파베이 학교들이 'A' 등급을 받지만, 학부모와 교육자들은 실질 학습을 의문시한다",
+    "summaryEn": "While Tampa Bay schools make an ‘A,’ some parents and educators question if kids are really learning WUSF",
+    "summaryKr": "탐파베이 지역 학교들이 높은 등급을 받았으나 실제 학습 효과에 대한 의문이 제기되고 있습니다. 이민자 가정의 자녀들을 포함한 학생들의 진정한 학습 성과와 교육 제도의 신뢰성 문제를 반영합니다.",
+    "tag": "Education",
+    "tagKr": "교육",
+    "url": "https://www.wusf.org/education/2026-07-15/while-tampa-bay-schools-make-an-a-some-parents-and-educators-question-if-kids-are-really-learning",
+    "source": "wusf.org"
+  },
+  {
+    "date": "2026-07-15",
+    "titleEn": "Florida’s big tax cut plan assumes a level of migration that has already collapsed 90%",
+    "titleKr": "플로리다의 대규모 감세 계획이 이미 90% 감소한 이민 수준을 가정하고 있다",
+    "summaryEn": "Florida’s big tax cut plan assumes a level of migration that has already collapsed 90% Fortune",
+    "summaryKr": "플로리다 주의 세금 감면 정책이 과거 이민 규모를 기반하고 있으나, 실제 이민은 90% 급감했습니다. 이는 이민자 인구 감소가 주의 경제와 세수에 미치는 영향의 심각성을 보여줍니다.",
+    "tag": "Tax & Finance",
+    "tagKr": "세금/재정",
+    "url": "https://fortune.com/2026/07/15/florida-tax-cut-migration-collapse/",
+    "source": "fortune.com"
+  },
+  {
+    "date": "2026-07-15",
+    "titleEn": "Third-country deportation is increasing, leaving lives in limbo in Iowa and other states",
+    "titleKr": "제3국으로의 강제 송환 증가로 아이오와 등 주의 주민들이 불확실한 상태에 놓여있다",
+    "summaryEn": "Third-country deportation is increasing, leaving lives in limbo in Iowa and other states Iowa Public Radio",
+    "summaryKr": "미국이 아닌 제3국으로의 강제 송환이 증가하면서 이민자들이 불명확한 신분과 미래에 직면하고 있습니다. 특히 아이오와와 다른 주의 이민자 커뮤니티가 장기간의 법적 불안정과 예측 불가능한 상황에서 고통받고 있습니다.",
+    "tag": "Immigration",
+    "tagKr": "이민",
+    "url": "https://www.iowapublicradio.org/ipr-news/2026-07-15/third-country-deportation-leaving-lives-in-limbo",
+    "source": "iowapublicradio.org"
+  },
+  {
+    "date": "2026-07-15",
+    "titleEn": "ICE told to halt most vehicle stops after pair of fatal shootings in Maine and Texas",
+    "titleKr": "메인과 텍사스의 연쇄 총격 사건 후 ICE의 차량 검문 중단 지시",
+    "summaryEn": "ICE told to halt most vehicle stops after pair of fatal shootings in Maine and Texas BBC",
+    "summaryKr": "이민집행청(ICE)의 차량 검문 단속으로 인한 치명적 사건 발생 후 대부분의 검문을 중단하도록 명령받았습니다. 이는 이민 단속 활동으로 인한 이민자 커뮤니티의 안전 위협 감소를 의미합니다.",
+    "tag": "Immigration",
+    "tagKr": "이민",
+    "url": "https://www.bbc.com/news/articles/cly8yrw597eo",
+    "source": "BBC"
+  },
+  {
+    "date": "2026-07-15",
+    "titleEn": "I earned a Purple Heart defending this nation. Now I can't bring my family home",
+    "titleKr": "이 나라를 지키고 자주색 훈장을 받았는데, 이제 가족을 데려올 수 없다",
+    "summaryEn": "I earned a Purple Heart defending this nation. Now I can't bring my family home Washington Examiner",
+    "summaryKr": "군 복무로 자주색 훈장을 받은 퇴역군인이 가족 이민 절차에서 막힌 상황. 이민자 가정의 가족 재결합이 얼마나 어려운지 드러내며, 많은 이민자 가족들이 복잡한 이민 법규로 인해 헤어져 있습니다.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://www.washingtonexaminer.com/op-eds/4647208/i-earned-purple-heart-cant-bring-family-home/",
+    "source": "washingtonexaminer.com"
+  },
+  {
     "date": "2026-07-14",
     "titleEn": "Will Florida make the Bible required reading in public schools? What to know",
     "titleKr": "플로리다, 공립학교에서 성경을 필수 과목으로 할 것인가?",
