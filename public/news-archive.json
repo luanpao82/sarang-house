@@ -1,5 +1,49 @@
 [
   {
+    "date": "2026-08-19",
+    "titleEn": "Bus driver charged with manslaughter in massive crash that killed 5 on I-95 in Virginia - ABC News",
+    "titleKr": "I-95 대형 버스 사고, 운전기사 과실치사 혐의",
+    "summaryEn": "Bus driver charged with manslaughter in massive crash that killed 5 on I-95 in Virginia ABC News - Breaking News, Latest News and Videos",
+    "summaryKr": "버지니아 주간고속도로 I-95에서 발생한 버스 충돌 사고로 5명이 사망했으며, 운전기사가 과실치사 혐의로 기소되었다. 대중교통 안전이 재점검되고 있으며, 특히 저소득층 이민자 커뮤니티의 교통 안전에 대한 관심이 높아지고 있다.",
+    "tag": "Transportation",
+    "tagKr": "교통",
+    "url": "https://abcnews.com/US/5-killed-34-hurt-massive-crash-bus-6/story?id=133415960",
+    "source": "ABC News"
+  },
+  {
+    "date": "2026-08-19",
+    "titleEn": "The Future of Charter Schools in an Evolving School Choice Landscape: Survey Evidence from Arizona, Florida, and Utah - American Enterprise Institute",
+    "titleKr": "교육 선택권 확대 시대 차터스쿨의 역할",
+    "summaryEn": "The Future of Charter Schools in an Evolving School Choice Landscape: Survey Evidence from Arizona, Florida, and Utah American Enterprise Institute - AEI",
+    "summaryKr": "아리조나, 플로리다, 유타 지역의 차터스쿨 현황에 관한 연구에서 교육 선택권 정책의 효과를 분석하고 있다. 이민 자녀들의 교육 기회와 학교 선택 옵션 확대가 중요한 이슈로 대두되고 있다.",
+    "tag": "Immigration",
+    "tagKr": "이민",
+    "url": "https://www.aei.org/research-products/report/the-future-of-charter-schools-in-an-evolving-school-choice-landscape-survey-evidence-from-arizona-florida-and-utah/",
+    "source": "aei.org"
+  },
+  {
+    "date": "2026-08-19",
+    "titleEn": "Home Insurance Is Quietly Killing the Florida Retirement Dream. Here’s the Math",
+    "titleKr": "주택보험 급등, 플로리다 은퇴 꿈 위협",
+    "summaryEn": "Home Insurance Is Quietly Killing the Florida Retirement Dream. Here’s the Math AOL.com",
+    "summaryKr": "플로리다의 급증하는 주택보험료가 은퇴자들의 생활비를 크게 압박하고 있으며, 주택 구매 의향도 떨어지고 있다. 고정 소득에 의존하는 노년 이민자들에게 특히 심각한 재정적 부담이 되고 있다.",
+    "tag": "Healthcare",
+    "tagKr": "건강보험",
+    "url": "https://www.aol.com/articles/home-insurance-quietly-killing-florida-213947000.html",
+    "source": "aol.com"
+  },
+  {
+    "date": "2026-08-19",
+    "titleEn": "Lawmaker: Asian-Americans aren't getting a pass from the Trump administration",
+    "titleKr": "트럼프 행정부, 아시아계 미국인에 대한 특별 대우 없다",
+    "summaryEn": "Lawmaker: Asian-Americans aren't getting a pass from the Trump administration Houston Chronicle",
+    "summaryKr": "트럼프 행정부 인사가 아시아계 미국인 커뮤니티에 대한 특별한 정책적 보호나 우대 조치가 없음을 명시했다. 이는 이민자 배경의 아시아계 미국인들의 권리 보호와 경제적 기회에 대한 우려를 높이고 있다.",
+    "tag": "Policy",
+    "tagKr": "정책",
+    "url": "https://www.houstonchronicle.com/politics/texas-take/article/gene-wu-asian-americans-aren-t-getting-pass-22393623.php",
+    "source": "houstonchronicle.com"
+  },
+  {
     "date": "2026-08-14",
     "titleEn": "Jeff Brandes: Where Amendment 3 gets weird",
     "titleKr": "Jeff Brandes: Where Amendment 3 gets weird",
