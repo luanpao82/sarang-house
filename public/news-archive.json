@@ -1,5 +1,60 @@
 [
   {
+    "date": "2026-08-25",
+    "titleEn": "When is suspending students discrimination? Education Dept. renews an old fight",
+    "titleKr": "학생 정학이 차별인가? 교육부, 오래된 논쟁 재개",
+    "summaryEn": "When is suspending students discrimination? Education Dept. renews an old fight WUSF",
+    "summaryKr": "미국 교육부가 학교 징계 정책의 차별성 문제에 대한 논의를 다시 제기하고 있습니다. 이는 소수 민족과 이민자 배경 학생들의 공정한 학교 징계 처우와 교육 기회 보장 문제와 직결되어 있으며, 이민자 자녀들의 교육 평등성에 중대한 영향을 미칠 수 있습니다.",
+    "tag": "Education",
+    "tagKr": "교육",
+    "url": "https://www.wusf.org/2026-08-25/when-is-suspending-students-discrimination-education-department-renews-an-old-fight",
+    "source": "wusf.org"
+  },
+  {
+    "date": "2026-08-25",
+    "titleEn": "Florida’s Proposed Property Tax Changes",
+    "titleKr": "플로리다의 부동산세 인상 제안",
+    "summaryEn": "Florida’s Proposed Property Tax Changes Noticias Newswire",
+    "summaryKr": "플로리다에서 부동산세 변경 정책이 논의되고 있습니다. 이는 주택을 소유한 이민자들의 세금 부담에 직접적인 영향을 미칠 수 있으며, 특히 저소득 이민 가정의 주택 소유 비용 증가로 이어져 경제적 어려움을 초래할 우려가 있습니다.",
+    "tag": "Tax & Finance",
+    "tagKr": "세금/재정",
+    "url": "https://www.noticiasnewswire.com/es/floridas-proposed-property-tax-changes/",
+    "source": "noticiasnewswire.com"
+  },
+  {
+    "date": "2026-08-25",
+    "titleEn": "Death by a Thousand Papercuts",
+    "titleKr": "천 가지 작은 상처들",
+    "summaryEn": "Death by a Thousand Papercuts Washington Monthly",
+    "summaryKr": "이민 절차의 복잡한 행정 규정과 요구 사항들이 신청자들에게 누적된 부담을 주고 있습니다. 각각의 작은 서류 작업과 비용들이 모여 이민 신청 과정을 더욱 어렵게 만들고 있으며, 특히 저소득 이민 가정의 입국 과정을 현저히 복잡하게 하고 있습니다.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://washingtonmonthly.com/2026/08/25/death-by-a-thousand-papercuts/",
+    "source": "washingtonmonthly.com"
+  },
+  {
+    "date": "2026-08-25",
+    "titleEn": "JD Vance backs $103,265 H-1B fee, policy groups push back",
+    "titleKr": "JD 밴스, H-1B 비자 수수료 $3,265 인상 지지... 정책 단체들 반발",
+    "summaryEn": "JD Vance backs $103,265 H-1B fee, policy groups push back The Times of India",
+    "summaryKr": "JD 밴스 부통령 당선자가 H-1B 비자 신청 수수료 대폭 인상을 지지하고 있습니다. 이 정책은 숙련된 이민 노동자들의 고용 비용을 크게 늘릴 것으로 예상되며, 직업 이민자들과 그들을 고용하는 기업들의 경제적 부담을 가중시킬 것으로 우려됩니다.",
+    "tag": "Policy",
+    "tagKr": "정책",
+    "url": "https://timesofindia.indiatimes.com/world/us/jd-vance-backs-103265-h-1b-fee-policy-groups-push-back/articleshow/133504933.cms",
+    "source": "timesofindia.indiatimes.com"
+  },
+  {
+    "date": "2026-08-25",
+    "titleEn": "America’s immigration policy is driving away future AI leaders",
+    "titleKr": "미국의 이민 정책이 미래 AI 리더들을 멀어지게 하고 있다",
+    "summaryEn": "America’s immigration policy is driving away future AI leaders Rest of World",
+    "summaryKr": "미국의 강화된 이민 정책이 해외 AI 인재들의 입국을 저해하고 있습니다. 이는 기술 산업 인재 부족으로 이어지고 있으며, 특히 이민자 과학자와 엔지니어들의 경력 발전 기회를 제한하고 있습니다.",
+    "tag": "Policy",
+    "tagKr": "정책",
+    "url": "https://restofworld.org/2026/us-immigration-rules-ai-talent-china/?utm_source=rss&utm_medium=rss&utm_campaign=feeds",
+    "source": "restofworld.org"
+  },
+  {
     "date": "2026-08-24",
     "titleEn": "School Choice Is Expanding. Will Public Support Follow?",
     "titleKr": "학교 선택 정책이 확대되고 있습니다. 공중의 지지는 뒤따를까요?",
