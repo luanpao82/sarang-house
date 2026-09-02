@@ -1,57 +1,35 @@
 [
   {
-    "date": "2026-08-26",
-    "titleEn": "U.S. adjusts immigrant visa appointments worldwide during consular training — Dateline USA",
-    "titleKr": "미국, 영사관 교육 중 전 세계 이민 비자 예약 일정 조정",
-    "summaryEn": "U.S. adjusts immigrant visa appointments worldwide during consular training — Dateline USA Asian Journal News",
-    "summaryKr": "미국 국무부가 영사관 직원 교육 기간 동안 전 세계 이민 비자 예약 일정을 조정했습니다. 이 조치로 인해 미국 이민을 준비 중인 사람들의 비자 인터뷰 일정이 지연될 수 있으며, 특히 직업 이민 신청자들의 출입국 계획에 영향을 미칠 것으로 예상됩니다.",
-    "tag": "Visa",
-    "tagKr": "비자",
-    "url": "https://asianjournal.com/usa/dateline-usa/us-adjusts-immigrant-visa-appointments-global-consular-training/",
-    "source": "asianjournal.com"
-  },
-  {
-    "date": "2026-08-26",
-    "titleEn": "Why Trump Is Now Trying to Charge a $103,000 Fee for H-1B Visas",
-    "titleKr": "트럼프 행정부, H-1B 비자에 $3,000 수수료 부과 추진",
-    "summaryEn": "Why Trump Is Now Trying to Charge a $103,000 Fee for H-1B Visas Bloomberg",
-    "summaryKr": "트럼프 행정부가 H-1B 업무 비자 신청에 새로운 수수료를 부과할 계획을 추진 중입니다. 이는 미국으로의 취업 이민을 고려하는 국제 전문가들의 경제적 부담을 크게 늘릴 것으로 예상되며, 기술 산업 이민자들의 입국 결정에 부정적 영향을 미칠 것으로 우려됩니다.",
-    "tag": "Visa",
-    "tagKr": "비자",
-    "url": "https://www.bloomberg.com/news/articles/2026-08-25/h-1b-visas-why-trump-wants-103-000-fee-after-previous-policy-was-struck-down",
-    "source": "bloomberg.com"
-  },
-  {
-    "date": "2026-08-26",
-    "titleEn": "ICE agent charged with shooting in Minnesota could be released from Texas jail - The Tribune-Democrat",
-    "titleKr": "미네소타 총기 사건으로 기소된 ICE 요원, 텍사스 감옥 석방 가능성",
-    "summaryEn": "ICE agent charged with shooting in Minnesota could be released from Texas jail The Tribune-Democrat",
-    "summaryKr": "미네소타에서 발생한 총기 사건으로 기소된 이민세관단속국(ICE) 요원이 텍사스 감옥에서 석방될 수 있는 상황입니다. 이 사건은 이민 단속 과정에서 법 집행 기관의 권력 행사 문제를 드러내며, 이민자 커뮤니티의 안전과 법 집행 기관의 책임성에 대한 우려를 증대시키고 있습니다.",
-    "tag": "Immigration",
-    "tagKr": "이민",
-    "url": "https://www.tribdem.com/news/latest_news/ice-agent-charged-with-shooting-in-minnesota-could-be-released-from-texas-jail/article_1e8c00f5-22bf-586a-9542-380ac72f7ae3.html",
-    "source": "tribdem.com"
-  },
-  {
-    "date": "2026-08-26",
-    "titleEn": "Sunburn — The morning read of what’s hot in Florida politics — 8.26.26",
-    "titleKr": "Sunburn - 플로리다 정치의 주요 뉴스",
-    "summaryEn": "Sunburn — The morning read of what’s hot in Florida politics — 8.26.26 Florida Politics",
-    "summaryKr": "플로리다 정치의 주요 이슈와 최신 소식을 전하는 일일 뉴스 브리핑입니다. 플로리다주의 정책 변화와 정치 동향은 거주하는 이민자 커뮤니티의 일상생활과 권리에 직접적인 영향을 미칩니다.",
+    "date": "2026-09-02",
+    "titleEn": "Trump’s Immigration Crackdown Could Hurt The US Economy. Could India’s GCCs Be The Winner? | Explainers News",
+    "titleKr": "트럼프의 이민 규제 강화가 미국 경제에 미칠 영향, 인도의 글로벌 역량 센터가 승자가 될까?",
+    "summaryEn": "Trump’s Immigration Crackdown Could Hurt The US Economy. Could India’s GCCs Be The Winner? | Explainers News news18.com",
+    "summaryKr": "트럼프 행정부의 강력한 이민 규제 정책이 미국 경제에 부정적 영향을 미칠 수 있다는 분석입니다. 이는 특히 한국계 미국인 이민자들의 취업 기회와 비자 정책에 직접적인 영향을 줄 수 있으며, 미국 내 기술 인력 수급에 변화를 초래할 것으로 예상됩니다.",
     "tag": "News",
     "tagKr": "뉴스",
-    "url": "https://floridapolitics.com/archives/816574-sunburn-the-morning-read-of-whats-hot-in-florida-politics-8-26-26/",
-    "source": "floridapolitics.com"
+    "url": "https://www.news18.com/explainers/trumps-immigration-crackdown-could-hurt-the-us-economy-could-indias-gccs-be-the-winner-shil-ws-l-10305544.html",
+    "source": "news18.com"
   },
   {
-    "date": "2026-08-26",
-    "titleEn": "Pasco prepares rule updates to deal with housing impacts on schools",
-    "titleKr": "파스코 카운티, 주택 부족으로 인한 학교 영향 대응 규칙 개정",
-    "summaryEn": "Pasco prepares rule updates to deal with housing impacts on schools Tampa Bay Times",
-    "summaryKr": "파스코 카운티가 급증하는 인구 증가로 인한 주택 부족이 학교 교육 시스템에 미치는 영향을 해결하기 위해 규칙을 개정하고 있습니다. 이 정책은 증가하는 이민자 가족들의 자녀 교육 접근성과 학교 자원 분배에 중요한 영향을 미칠 것으로 예상됩니다.",
-    "tag": "Education",
-    "tagKr": "교육",
-    "url": "https://www.tampabay.com/news/education/2026/08/26/pasco-prepares-rule-updates-deal-with-housing-impacts-schools/",
-    "source": "tampabay.com"
+    "date": "2026-09-02",
+    "titleEn": "Austin man’s wrongful deportation casts scrutiny on Texas’ embrace of ICE partnerships",
+    "titleKr": "텍사스 ICE 협력 정책의 부작용: 오스틴 주민 부당 강제추방 사건",
+    "summaryEn": "Austin man’s wrongful deportation casts scrutiny on Texas’ embrace of ICE partnerships The Texas Tribune",
+    "summaryKr": "오스틴의 한 주민이 부당하게 강제추방되는 사건이 발생하며 텍사스의 ICE 협력 정책에 대한 의문이 제기되고 있습니다. 이 사건은 이민자 커뮤니티의 신뢰를 훼손하고, 한국계를 포함한 모든 이민자들의 법적 권리 보호 필요성을 다시 한번 부각시키고 있습니다.",
+    "tag": "Immigration",
+    "tagKr": "이민",
+    "url": "https://www.texastribune.org/2026/09/02/texas-deported-citizen-brian-morales-ice-partnerships-local-police-sheriffs-287g/",
+    "source": "texastribune.org"
+  },
+  {
+    "date": "2026-09-02",
+    "titleEn": "National policy conference encourages state leaders to adopt Florida’ 'wild schools' education model",
+    "titleKr": "플로리다의 '와일드 스쿨' 교육 모델, 전국 확대 추진",
+    "summaryEn": "National policy conference encourages state leaders to adopt Florida’ 'wild schools' education model nextstepsblog.org",
+    "summaryKr": "플로리다주의 혁신적 교육 모델인 '와일드 스쿨'이 전국 교육 정책 회의에서 다른 주 지도자들에게 소개되었습니다. 이 교육 정책 변화는 이민자 가정의 자녀 교육에 영향을 미칠 수 있으며, 한국계 커뮤니티의 교육에 대한 관심과도 연결된 주요 정책 이슈입니다.",
+    "tag": "Policy",
+    "tagKr": "정책",
+    "url": "https://nextstepsblog.org/2026/09/national-policy-conference-encourages-state-leaders-to-adopt-florida-wild-schools-education-model/",
+    "source": "nextstepsblog.org"
   }
 ]
