@@ -1,24 +1,57 @@
 [
   {
-    "date": "2026-09-03",
-    "titleEn": "U.S court blocks Trump’s birthright citizenship restriction",
-    "titleKr": "미국 법원, 트럼프의 출생지 시민권 제한 차단",
-    "summaryEn": "U.S court blocks Trump’s birthright citizenship restriction TheGuildNG",
-    "summaryKr": "미국 법원이 트럼프 행정부의 출생지 시민권 제한 정책을 차단했습니다. 이는 미국에서 출생한 아이들의 자동 시민권을 보장하는 수정헌법 14조를 지키는 것으로, 이민자 가정의 자녀들이 미국 시민이 될 권리를 보호합니다. 이 결정은 이민 정책에서 가장 중요한 승리입니다.",
+    "date": "2026-09-04",
+    "titleEn": "South Korea says chip investments under discussion with U.S.",
+    "titleKr": "한국, 미국과 반도체 투자 협의 중이라고 발표",
+    "summaryEn": "South Korea says chip investments under discussion with U.S. 朝日新聞",
+    "summaryKr": "한국과 미국 간의 반도체 산업 협력이 진행 중입니다. 이는 미국의 첨단 기술 산업 일자리 창출로 이민자 커뮤니티의 기술 부문 취업 기회 확대를 의미합니다.",
     "tag": "News",
     "tagKr": "뉴스",
-    "url": "https://theguildng.com/u-s-court-blocks-trumps-birthright-citizenship-restriction/",
-    "source": "theguildng.com"
+    "url": "https://www.asahi.com/ajw/articles/16863831",
+    "source": "asahi.com"
   },
   {
-    "date": "2026-09-03",
-    "titleEn": "Florida charter schools reach record student enrollment",
-    "titleKr": "플로리다 차터스쿨, 학생 등록 기록 경신",
-    "summaryEn": "Florida charter schools reach record student enrollment Tampa Bay Times",
-    "summaryKr": "플로리다의 차터스쿨이 역사상 최고의 학생 등록을 기록했습니다. 이는 다양한 교육 선택지를 제공하여 모든 배경의 학생, 특히 이민자 가정의 자녀들이 맞춤형 교육을 받을 수 있는 기회를 제공합니다. 차터스쿨의 성장은 플로리다의 교육 다양성 증가를 보여줍니다.",
-    "tag": "Education",
-    "tagKr": "교육",
-    "url": "https://www.tampabay.com/news/education/2026/09/03/florida-charter-schools-reach-record-student-enrollment/",
-    "source": "tampabay.com"
+    "date": "2026-09-04",
+    "titleEn": "U.S. immigration enforcement stance highlights labor and economic policy tensions",
+    "titleKr": "미국 이민 단속 강화, 노동 및 경제 정책 갈등 심화",
+    "summaryEn": "U.S. immigration enforcement stance highlights labor and economic policy tensions Traders Union",
+    "summaryKr": "미국의 강화된 이민 단속 정책이 노동시장과 경제 정책 간의 긴장을 야기하고 있습니다. 이는 이민자 노동자들의 근로 환경과 경제 기회에 직접적인 영향을 미치고 있습니다.",
+    "tag": "Immigration",
+    "tagKr": "이민",
+    "url": "https://tradersunion.com/news/financial-news/show/3221857-us-immigration-policy-labor-economy/",
+    "source": "tradersunion.com"
+  },
+  {
+    "date": "2026-09-04",
+    "titleEn": "Meet the candidates for Dane County Circuit Court",
+    "titleKr": "데인 카운티 순회법원 선거 후보자 소개",
+    "summaryEn": "Meet the candidates for Dane County Circuit Court Wisconsin Justice Initiative Inc.",
+    "summaryKr": "데인 카운티 순회법원 선거에 출마한 후보자들을 소개합니다. 법원 판사 선거는 이민자 커뮤니티의 법적 권리 보호와 공정한 사법 접근에 중요한 영향을 미칩니다.",
+    "tag": "Immigration",
+    "tagKr": "이민",
+    "url": "https://www.wjiinc.org/blog/meet-the-candidates-for-dane-county-circuit-court",
+    "source": "wjiinc.org"
+  },
+  {
+    "date": "2026-09-04",
+    "titleEn": "Friday’s Daily Pulse",
+    "titleKr": "금요일의 데일리 펄스",
+    "summaryEn": "Friday’s Daily Pulse Florida Trend",
+    "summaryKr": "금요일의 주요 뉴스와 이슈를 정리한 일일 브리핑입니다. 이민 정책 변화와 플로리다 지역 사회 소식을 포함하고 있습니다.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://www.floridatrend.com/news/2026/09/04/fridays-daily-pulse/",
+    "source": "floridatrend.com"
+  },
+  {
+    "date": "2026-09-04",
+    "titleEn": "Labor Day Weekend is brought to you by these Florida lobbyists and political associations",
+    "titleKr": "노동절 주말 행사, 플로리다 로비스트와 정치 단체 후원",
+    "summaryEn": "Labor Day Weekend is brought to you by these Florida lobbyists and political associations Florida Politics",
+    "summaryKr": "노동절 주말 행사가 플로리다의 주요 로비스트와 정치 단체들의 지원으로 개최됩니다. 이민자 노동자를 포함한 다양한 커뮤니티의 노동권과 경제 정책 이슈가 논의될 예정입니다.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://floridapolitics.com/archives/818234-labor-day-weekend-is-brought-to-you-by-these-florida-lobbyists-and-political-associations-5/",
+    "source": "floridapolitics.com"
   }
 ]
