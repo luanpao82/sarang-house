@@ -1,5 +1,49 @@
 [
   {
+    "date": "2026-09-16",
+    "titleEn": "Every risk, everywhere, all at once",
+    "titleKr": "모든 위험, 곳곳에, 한 번에",
+    "summaryEn": "Every risk, everywhere, all at once Politico",
+    "summaryKr": "현재 이민 정책 환경에서 이민자가 직면한 복합적 도전을 다룹니다. 비자 처리 지연, 공공부담 규칙, 정책 불확실성 등 여러 위험이 동시에 이민자 커뮤니티에 영향을 미치고 있습니다.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://www.politico.com/newsletters/florida-playbook/2026/09/16/every-risk-everywhere-all-at-once-01078920",
+    "source": "Politico"
+  },
+  {
+    "date": "2026-09-16",
+    "titleEn": "New York leads legal fight against public charge rule as Haitian immigrants brace for impact",
+    "titleKr": "뉴욕, 공공부담 규칙 폐지 법적 투쟁 선도",
+    "summaryEn": "New York leads legal fight against public charge rule as Haitian immigrants brace for impact haitiantimes.com",
+    "summaryKr": "뉴욕주가 공공부담 규칙에 대항한 법적 소송을 주도하고 있으며, 아이티 이민자들을 포함한 이민자 커뮤니티가 규칙 시행에 대비하고 있습니다. 공공부담 규칙은 이민 신청자의 공공 혜택 이용 가능성을 제한해 이민자 가족의 경제생활에 직접적 타격을 줄 수 있습니다.",
+    "tag": "Welfare",
+    "tagKr": "복지",
+    "url": "https://haitiantimes.com/2026/09/16/public-charge-rule-lawsuit-haitian-immigrants-nyc/",
+    "source": "haitiantimes.com"
+  },
+  {
+    "date": "2026-09-16",
+    "titleEn": "EDITORIAL: Damfool policy - Northwest Arkansas Democrat-Gazette",
+    "titleKr": "편집평: 무분별한 정책 비판",
+    "summaryEn": "EDITORIAL: Damfool policy Northwest Arkansas Democrat-Gazette",
+    "summaryKr": "노스웨스트 아칸소 민주당 신문이 현재 연방 정책을 강하게 비판했습니다. 이는 이민자 커뮤니티에 미치는 정책 결정의 부정적 영향을 지적합니다.",
+    "tag": "Policy",
+    "tagKr": "정책",
+    "url": "https://www.nwaonline.com/news/2026/sep/16/editorial-damfool-policy/",
+    "source": "nwaonline.com"
+  },
+  {
+    "date": "2026-09-16",
+    "titleEn": "Current Status of U.S. Visa Services By Country - September 2026",
+    "titleKr": "2026년 9월 국가별 미국 비자 서비스 현황",
+    "summaryEn": "Current Status of U.S. Visa Services By Country - September 2026 Boundless Immigration",
+    "summaryKr": "미국 비자 서비스의 국가별 처리 상황이 업데이트되었습니다. 이는 이민을 희망하는 개인들에게 비자 승인 대기 시간과 절차를 이해하는 데 중요한 정보를 제공합니다.",
+    "tag": "Visa",
+    "tagKr": "비자",
+    "url": "https://www.boundless.com/blog/us-embassy-and-consulate-statuses",
+    "source": "boundless.com"
+  },
+  {
     "date": "2026-09-15",
     "titleEn": "Florida Board of Education set to create AI rules for schools, colleges",
     "titleKr": "플로리다 교육위, 학교·대학 AI 규칙 수립 추진",
