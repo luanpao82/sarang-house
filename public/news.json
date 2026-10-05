@@ -1,46 +1,57 @@
 [
   {
-    "date": "2026-10-03",
-    "titleEn": "Bay Area legislative aide Ho Yin Mo released by ICE",
-    "titleKr": "베이 에어리어 입법보좌관 호인모, ICE에서 석방",
-    "summaryEn": "Bay Area legislative aide Ho Yin Mo released by ICE AsAmNews",
-    "summaryKr": "베이 에어리어의 입법보좌관 호인모가 ICE에 의해 구금되었다가 최근 석방되었다. 이 사건은 이민 정책의 강화가 지역 공무원과 한인 이민자 커뮤니티에 미치는 직접적 영향을 보여주며, 이민자 보호와 법적 절차에 대한 우려를 높이고 있다.",
-    "tag": "Immigration",
-    "tagKr": "이민",
-    "url": "https://asamnews.com/2026/10/02/ho-yin-mo-released-ice-custody-deportation-case-continues/",
+    "date": "2026-10-05",
+    "titleEn": "Op-Ed: Birthright citizenship and who gets to belong",
+    "titleKr": "논설: 태어난 곳의 시민권과 누가 정말 이 사회의 일원이 될 수 있는가",
+    "summaryEn": "Op-Ed: Birthright citizenship and who gets to belong asamnews.com",
+    "summaryKr": "이 논설은 미국의 전통적 시민권 부여 정책과 그것이 이민자 공동체에 미치는 의미를 다룬다. 한국계 미국인들을 포함한 많은 이민자 가정들에게 이는 시민권 취득 경로와 그들의 법적 지위에 직접적인 영향을 미친다. 이 정책 변화는 향후 세대의 이민자 자녀들의 법적 권리와 사회 통합에 대한 중요한 질문을 제기하고 있다.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://asamnews.com/2026/10/04/birthright-citizenship-common-ground/",
     "source": "AsAmNews"
   },
   {
-    "date": "2026-10-03",
-    "titleEn": "How Trump’s Deportation Policies Have Rocked a South Florida House Race",
-    "titleKr": "트럼프 강제송환 정책, 남플로리다 하원의원 경선 격화",
-    "summaryEn": "How Trump’s Deportation Policies Have Rocked a South Florida House Race The New York Times",
-    "summaryKr": "트럼프의 강제송환 정책이 남플로리다의 하원의원 선거 판도를 흔들고 있다. 이민자 밀집 지역의 정치 양극화로 인해 한인, 라틴계 등 이민자 유권자들의 투표 성향이 선거 결과를 좌우할 수 있는 상황으로, 향후 이민 정책의 방향성이 이 선거에 달려있다.",
-    "tag": "Immigration",
-    "tagKr": "이민",
-    "url": "https://www.nytimes.com/2026/10/03/us/politics/how-a-provocative-ad-on-trump-and-immigration-stirred-a-florida-house-race.html",
-    "source": "The New York Times"
-  },
-  {
-    "date": "2026-10-03",
-    "titleEn": "Outdated tax laws trap homeowners | Letters to the editor",
-    "titleKr": "시대에 뒤떨어진 세법, 주택소유자들 피해 - 독자투고",
-    "summaryEn": "Outdated tax laws trap homeowners | Letters to the editor Sun Sentinel",
-    "summaryKr": "구식 세법 제도로 인해 주택소유자들이 과중한 세금 부담을 안고 있다는 의견이 제기되었다. 특히 재산을 소유한 이민자 가정들에게 영향을 미치는 불공정한 세제로, 현대화된 세법 개선과 공평한 세금 체계 도입이 시급한 상황이다.",
+    "date": "2026-10-05",
+    "titleEn": "AAHOA Welcomes Governor Newsom's Veto of California Hotel Guest Disclosure Bill",
+    "titleKr": "AAHOA, 뉴섬 캘리포니아 주지사의 호텔 투숙객 정보 공개법 거부권 환영",
+    "summaryEn": "AAHOA Welcomes Governor Newsom's Veto of California Hotel Guest Disclosure Bill hospitalitynet.org",
+    "summaryKr": "아시아 태평양 미국인 호텔 소유주 협회(AAHOA)는 뉴섬 주지사가 호텔 사업에 과도한 규제 부담을 주는 법안에 거부권을 행사한 것을 환영했다. 한국계 미국인을 포함한 아시아계 커뮤니티의 많은 호텔 사업가들은 이 법안이 중소 호텔 운영자들에게 경제적 부담을 가할 수 있다고 우려했다. 이번 거부권은 소수 이민자 사업가들의 경영 자유도를 지키는 중요한 승리로 평가된다.",
     "tag": "Policy",
     "tagKr": "정책",
-    "url": "https://www.sun-sentinel.com/2026/10/03/outdated-tax-laws-trap-homeowners-letters-to-the-editor/",
-    "source": "sun-sentinel.com"
+    "url": "https://www.hospitalitynet.org/news/4134727/aahoa-welcomes-governor-newsoms-veto-of-california-hotel-guest-disclosure-bill",
+    "source": "hospitalitynet.org"
   },
   {
-    "date": "2026-10-03",
-    "titleEn": "Boca Raton's FAU Lab Schools Earn No. 1 National Ranking Among Best Public K-12 Schools",
-    "titleKr": "보카래턴 FAU 랩 스쿨, 미국 최고의 공립 K-12 학교 1위 선정",
-    "summaryEn": "Boca Raton's FAU Lab Schools Earn No. 1 National Ranking Among Best Public K-12 Schools TAPinto",
-    "summaryKr": "플로리다 보카래턴의 FAU 랩 스쿨이 미국 최고의 공립 K-12 학교로 선정되어 지역의 교육 수준을 높이는 데 성공했다. 우수한 교육 환경은 이민자 자녀들을 포함한 모든 학생에게 평등한 교육 기회를 제공하며, 지역 사회의 사회경제적 향상에 기여하고 있다.",
+    "date": "2026-10-05",
+    "titleEn": "Florida’s limited ban on Flock cameras only scratches the surface of widespread surveillance concerns",
+    "titleKr": "플로리다의 플록 카메라 제한적 금지, 광범위한 감시 우려 문제를 해결하지 못하다",
+    "summaryEn": "Florida’s limited ban on Flock cameras only scratches the surface of widespread surveillance concerns The Conversation",
+    "summaryKr": "플로리다는 플록 카메라 사용을 제한하는 법을 통과시켰지만, 이는 여전히 광범위하게 전개되는 감시 기술의 빙산의 일각만 건드렸을 뿐이다. 이주 커뮤니티를 포함한 모든 주민들이 개인정보 보호와 감시로부터의 자유에 대한 우려를 제기하고 있다. 더욱 강력한 프라이버시 보호 법안이 필요하다는 목소리가 높아지고 있다.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://theconversation.com/floridas-limited-ban-on-flock-cameras-only-scratches-the-surface-of-widespread-surveillance-concerns-292174",
+    "source": "theconversation.com"
+  },
+  {
+    "date": "2026-10-05",
+    "titleEn": "Here's why Amendment 3 is the wrong tax fix for Florida | Indicators",
+    "titleKr": "플로리다의 세금 문제 해결책으로 수정안 3이 부족한 이유",
+    "summaryEn": "Here's why Amendment 3 is the wrong tax fix for Florida | Indicators Miami Herald",
+    "summaryKr": "수정안 3은 플로리다의 세금 체계를 개선하기 위한 제안이지만, 전문가들은 이것이 근본적인 문제를 해결하지 못한다고 지적한다. 중산층과 저소득층 가정, 특히 많은 이민자 가정들의 세금 부담에 실질적인 영향을 미칠 수 있다. 더 포괄적인 세금 개혁이 필요하다는 논의가 진행 중이다.",
+    "tag": "Tax & Finance",
+    "tagKr": "세금/재정",
+    "url": "https://www.miamiherald.com/news/article317494956.html",
+    "source": "miamiherald.com"
+  },
+  {
+    "date": "2026-10-05",
+    "titleEn": "Trust in Education Has Fallen. It’s Time to Bring Back Strong Accountability",
+    "titleKr": "교육에 대한 신뢰 하락, 이제 강력한 책임성을 되살려야 할 때",
+    "summaryEn": "Trust in Education Has Fallen. It’s Time to Bring Back Strong Accountability The 74 Million",
+    "summaryKr": "미국 전역에서 교육 제도와 학교 운영에 대한 신뢰가 지속적으로 하락하고 있다. 한국계 미국인 가정을 포함한 많은 이민자 부모들은 자녀 교육의 질과 안전을 놓고 깊은 우려를 표하고 있다. 전문가들은 교사, 학교 행정부, 그리고 교육 정책 입안자들의 투명한 책임성과 성과 중심의 개혁이 시급하다고 강조하고 있다.",
     "tag": "Education",
     "tagKr": "교육",
-    "url": "https://www.tapinto.net/towns/boca-raton/sections/education/articles/boca-raton-s-fau-lab-schools-earn-no-1-national-ranking-among-best-public-k-12-schools",
-    "source": "tapinto.net"
+    "url": "https://www.the74million.org/article/trust-in-education-has-fallen-its-time-to-bring-back-strong-accountability/",
+    "source": "the74million.org"
   }
 ]
