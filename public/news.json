@@ -1,46 +1,57 @@
 [
   {
-    "date": "2026-10-07",
-    "titleEn": "Christa Pike Should Be Executed",
-    "titleKr": "크리스타 파이크, 사형 집행되어야 한다",
-    "summaryEn": "Christa Pike Should Be Executed City Journal",
-    "summaryKr": "사형 관련 법적 판결 뉴스입니다. 이는 미국 형사 사법 제도의 중요한 사건으로, 이민자 커뮤니티도 미국 법 집행 시스템의 투명성과 공정성에 대한 우려를 갖게 할 수 있습니다.",
+    "date": "2026-10-08",
+    "titleEn": "Midterms in 30: Hot Issues: Immigration - The George-Anne Media Group",
+    "titleKr": "30일 뒤 중간선거의 핫이슈: 이민정책",
+    "summaryEn": "Midterms in 30: Hot Issues: Immigration The George-Anne Media Group",
+    "summaryKr": "미국 중간선거가 다가오면서 이민정책이 주요 쟁점으로 부상하고 있다. 이 선거 결과는 이민자 공동체와 그 가족들의 비자 정책, 시민권 경로, 일자리 기회에 직접적인 영향을 미칠 것이다.",
     "tag": "News",
     "tagKr": "뉴스",
-    "url": "https://www.city-journal.org/article/city-journal-daily-newsletter-oct-7-2026",
-    "source": "city-journal.org"
+    "url": "https://thegeorgeanne.com/53744/election-coverage/midterms-in-30-hot-issues-immigration/",
+    "source": "thegeorgeanne.com"
   },
   {
-    "date": "2026-10-07",
-    "titleEn": "Stockton drops out of lawsuits challenging Trump administration grant rules",
-    "titleKr": "스톡턴, 트럼프 행정부 보조금 규칙 소송 철회",
-    "summaryEn": "Stockton drops out of lawsuits challenging Trump administration grant rules The San Joaquin Valley Sun",
-    "summaryKr": "스톡턴 시가 연방 정부의 보조금 규칙 변경에 대한 법적 소송을 취소했습니다. 이는 지방 자치 단체의 연방 자금 지원 축소와 관련이 있으며, 이민자 지원 프로그램 자금에도 간접적 영향을 미칠 수 있습니다.",
-    "tag": "Policy",
-    "tagKr": "정책",
-    "url": "https://sjvsun.com/news/stockton/stockton-drops-out-of-lawsuits-challenging-trump-administration-grant-rules/",
-    "source": "sjvsun.com"
-  },
-  {
-    "date": "2026-10-07",
-    "titleEn": "Fear Kept Immigrants Away From Medicaid. Now Many Can’t Come Back.",
-    "titleKr": "두려움이 이민자들을 메디케이드에서 멀어지게 했다. 이제 돌아올 수 없다",
-    "summaryEn": "Fear Kept Immigrants Away From Medicaid. Now Many Can’t Come Back. Mother Jones",
-    "summaryKr": "정책 변화에 대한 두려움으로 많은 이민자들이 메디케이드를 신청하지 않았고, 이제 자격 회복이 어려워졌습니다. 이는 저소득 이민자 가정의 의료 접근성을 심각하게 제한하고 공중 보건 위기로 이어질 수 있습니다.",
-    "tag": "Healthcare",
-    "tagKr": "건강보험",
-    "url": "https://www.motherjones.com/politics/2026/10/california-medicaid-immigration-cuts-disenrollment-obbb-health-insurance-fear/",
-    "source": "motherjones.com"
-  },
-  {
-    "date": "2026-10-07",
-    "titleEn": "Sunburn — The morning read of what’s hot in Florida politics — 10.7.26",
-    "titleKr": "선번(Sunburn) — 플로리다 정치 아침뉴스 — 10.7.26",
-    "summaryEn": "Sunburn — The morning read of what’s hot in Florida politics — 10.7.26 Florida Politics",
-    "summaryKr": "플로리다 정치의 최신 이슈와 개발 사항을 다루는 일간 정치 뉴스레터입니다. 플로리다의 정치 변화는 미국 최대 규모의 히스패닉 및 이민자 커뮤니티에 직접적인 영향을 미칩니다.",
+    "date": "2026-10-08",
+    "titleEn": "Trump scolds GOP caddy at midterms",
+    "titleKr": "중간선거 캠프에서 트럼프, GOP 후보 꾸짖다",
+    "summaryEn": "Trump scolds GOP caddy at midterms The Korea Times",
+    "summaryKr": "트럼프 전 대통령이 중간선거 관련 GOP 후보자들을 공개 비판했다. 공화당 내 이러한 갈등은 향후 이민 정책 입법 방향에 큰 영향을 미칠 수 있다.",
     "tag": "News",
     "tagKr": "뉴스",
-    "url": "https://floridapolitics.com/archives/823397-sunburn-the-morning-read-of-whats-hot-in-florida-politics-10-7-26/",
-    "source": "floridapolitics.com"
+    "url": "https://www.koreatimes.co.kr/opinion/cartoons/editorialcartoons/20261008/trump-scolds-gop-caddy-at-midterms",
+    "source": "koreatimes.co.kr"
+  },
+  {
+    "date": "2026-10-08",
+    "titleEn": "Florida’s Ban on Undocumented Students Raises Questions About Access, Workforce, and Opportunity",
+    "titleKr": "플로리다 미등록 학생 입학금지, 교육접근성과 인력양성 문제 제기",
+    "summaryEn": "Florida’s Ban on Undocumented Students Raises Questions About Access, Workforce, and Opportunity The Fulcrum",
+    "summaryKr": "플로리다 주의 미등록 학생 입학 금지 정책으로 이민자 가정의 자녀들이 고등교육 기회를 잃고 있다. 이는 지역 경제에 필요한 숙련 인력 부족으로 이어질 가능성이 높다.",
+    "tag": "Education",
+    "tagKr": "교육",
+    "url": "https://thefulcrum.us/governance-legislation/florida-undocumented-students-public-higher-education-ban",
+    "source": "thefulcrum.us"
+  },
+  {
+    "date": "2026-10-08",
+    "titleEn": "Miami-Dade Bar announces its 2026 Circle of Excellence Award honorees",
+    "titleKr": "마이애미-데이드 변호사협회, 2026년 우수상 수상자 명단 발표",
+    "summaryEn": "Miami-Dade Bar announces its 2026 Circle of Excellence Award honorees The Florida Bar",
+    "summaryKr": "마이애미-데이드 변호사협회가 올해 우수상 수상자들을 공식 발표했다. 지역 한인 변호사들을 포함한 다양한 배경의 법조인들이 공동체 법률 서비스 향상에 기여하고 있다.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://www.floridabar.org/the-florida-bar-news/miami-dade-bar-announces-its-2026-circle-of-excellence-award-honorees/",
+    "source": "floridabar.org"
+  },
+  {
+    "date": "2026-10-08",
+    "titleEn": "What is FSUS? Meet the K-12 lab school run in partnership with FSU",
+    "titleKr": "FSUS는 무엇인가? FSU와 운영하는 K-12 실험학교 소개",
+    "summaryEn": "What is FSUS? Meet the K-12 lab school run in partnership with FSU FSView & Florida Flambeau",
+    "summaryKr": "플로리다주립대학교(FSU)와 협력하는 K-12 실험학교 FSUS가 지역 학생들에게 혁신적 교육 기회를 제공하고 있다. 저소득층 및 소수 배경 학생들의 교육 접근성 확대에 기여하고 있다.",
+    "tag": "Education",
+    "tagKr": "교육",
+    "url": "https://www.fsunews.com/story/news/2026/10/08/inside-florida-high-tallahassees-research-focused-k-12-school/92091169007/",
+    "source": "fsunews.com"
   }
 ]
