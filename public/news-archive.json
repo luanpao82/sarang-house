@@ -1,5 +1,60 @@
 [
   {
+    "date": "2026-10-20",
+    "titleEn": "Pinellas charter school to close this month, unable to pay its bills",
+    "titleKr": "피넬러스 카운티 차터스쿨, 재정난으로 이번 달 폐교 예정",
+    "summaryEn": "Pinellas charter school to close this month, unable to pay its bills Tampa Bay Times",
+    "summaryKr": "피넬러스 카운티의 한 차터스쿨이 밀린 공과금과 운영비를 감당하지 못해 이번 달 문을 닫습니다. 학교 선택지가 줄어들면서 자녀의 전학을 준비해야 하는 가정, 특히 교육 정보와 지원이 부족한 이민 가정에 영향이 갈 수 있습니다.",
+    "tag": "Policy",
+    "tagKr": "정책",
+    "url": "https://www.tampabay.com/news/education/2026/10/20/pinellas-charter-school-close-this-month-unable-pay-its-bills/",
+    "source": "tampabay.com"
+  },
+  {
+    "date": "2026-10-20",
+    "titleEn": "Uncovered: How Florida’s governor and CFO candidates plan to fix your property insurance",
+    "titleKr": "[심층 분석] 플로리다 주지사·재무장관 후보들의 부동산 보험 개혁 방안",
+    "summaryEn": "Uncovered: How Florida’s governor and CFO candidates plan to fix your property insurance Sun Sentinel",
+    "summaryKr": "플로리다 주지사와 재무장관 후보들이 부동산 보험 문제를 해결하기 위한 계획을 내놓고 있습니다. 주택 보험 비용은 집을 소유한 이민자와 소규모 자영업자에게 큰 부담이 되는 만큼, 후보들의 정책 차이를 꼼꼼히 살펴볼 필요가 있습니다.",
+    "tag": "Healthcare",
+    "tagKr": "건강보험",
+    "url": "https://www.sun-sentinel.com/2026/10/20/uncovered-how-floridas-governor-and-cfo-candidates-plan-to-fix-your-property-insurance/",
+    "source": "sun-sentinel.com"
+  },
+  {
+    "date": "2026-10-20",
+    "titleEn": "Justice or election campaign? The order against Raúl Castro comes amid doubts and unease in the Cuban exile community",
+    "titleKr": "정의인가, 선거 운동인가?: 라울 카스트로를 겨냥한 조치를 둘러싼 쿠바 망명자 사회의 의구심",
+    "summaryEn": "Justice or election campaign? The order against Raúl Castro comes amid doubts and unease in the Cuban exile community CiberCuba",
+    "summaryKr": "라울 카스트로를 겨냥한 조치가 법적 정의 실현인지, 정치적 동기에서 나온 것인지를 두고 쿠바계 망명자 공동체 안에서 의구심이 나오고 있습니다. 플로리다의 쿠바계 이민자들에게 이 문제는 쿠바 정권과 미국 대쿠바 정책에 대한 복잡한 감정을 불러일으킬 수 있습니다.",
+    "tag": "Immigration",
+    "tagKr": "이민",
+    "url": "https://en.cibercuba.com/noticias/2026-10-20-u207888-e207888-s27061-nid343317-justicia-campana-electoral-orden-contra-raul",
+    "source": "en.cibercuba.com"
+  },
+  {
+    "date": "2026-10-20",
+    "titleEn": "‘US will burn like France’: Trump doubles down on immigration rhetoric to back Republicans",
+    "titleKr": "'미국도 프랑스처럼 불타게 될 것': 트럼프, 공화당 지원을 위해 이민 관련 강경 발언을 재차 강조",
+    "summaryEn": "‘US will burn like France’: Trump doubles down on immigration rhetoric to back Republicans The Economic Times",
+    "summaryKr": "트럼프 대통령이 공화당을 지원하면서 이민에 대한 강경한 발언을 되풀이하고 있습니다. 이런 수사는 이민자 사회의 불안과 긴장을 키울 수 있으며, 이민 단속과 정책 방향에도 영향을 줄 수 있어 지속적인 관심이 필요합니다.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://economictimes.indiatimes.com/news/international/world-news/us-will-burn-like-france-trump-doubles-down-on-immigration-rhetoric-to-back-republicans/videoshow/135063727.cms?from=mdr",
+    "source": "economictimes.indiatimes.com"
+  },
+  {
+    "date": "2026-10-20",
+    "titleEn": "AAPIVote And AP-NORC Poll Finds Asian Americans Disenchanted With Trump And Republicans Ahead Of Nov. 3",
+    "titleKr": "AAPIVote·AP-NORC 여론조사: 아시안 아메리칸, 11월 3일 선거를 앞두고 트럼프와 공화당에 실망",
+    "summaryEn": "AAPIVote And AP-NORC Poll Finds Asian Americans Disenchanted With Trump And Republicans Ahead Of Nov. 3 NewsCord",
+    "summaryKr": "AAPIVote와 AP-NORC의 여론조사에 따르면 아시안 아메리칸 유권자들이 트럼프 대통령과 공화당에 대한 실망감을 드러내고 있습니다. 11월 3일 선거를 앞둔 이 흐름은 한인을 포함한 이민자 공동체의 투표 선택에 영향을 줄 수 있어 주목할 필요가 있습니다.",
+    "tag": "News",
+    "tagKr": "뉴스",
+    "url": "https://newscord.org/article/asian-americans-trust-in-trump-fading-as-economic-woes-increase-survey-finds-sou--Story_20261020_AsianAmericanstrusti4cbab9f0",
+    "source": "newscord.org"
+  },
+  {
     "date": "2026-10-19",
     "titleEn": "Florida schools seek to bolster enrollment as student numbers slide",
     "titleKr": "감소하는 학생 수에 대응해 플로리다 학교들이 등록 확대에 나서",
